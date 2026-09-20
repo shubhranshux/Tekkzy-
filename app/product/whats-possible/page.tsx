@@ -312,7 +312,7 @@ export default function WhatsPossible() {
                 <Link href="/contact" className="inline-flex justify-center items-center gap-2 bg-accent-blue text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-all duration-300 shadow-lg shadow-accent-blue/30 hover:-translate-y-1">
                   Start Your Journey <Rocket size={18} />
                 </Link>
-                <Link href="/solutions" className="inline-flex justify-center items-center gap-2 bg-surface text-text border border-border px-8 py-4 rounded-full font-semibold hover:bg-background transition-all duration-300 hover:-translate-y-1">
+                <Link href="/product/solutions" className="inline-flex justify-center items-center gap-2 bg-surface text-text border border-border px-8 py-4 rounded-full font-semibold hover:bg-background transition-all duration-300 hover:-translate-y-1">
                   Explore Solutions
                 </Link>
               </div>
@@ -330,7 +330,7 @@ export default function WhatsPossible() {
           <span className="text-muted text-sm">© {new Date().getFullYear()} Tekkzy. Built for what&apos;s next.</span>
           <div className="flex gap-6 text-sm font-medium text-muted-dark">
             <Link href="/#product" className="hover:text-accent-blue transition-colors">Product</Link>
-            <Link href="/solutions" className="hover:text-accent-blue transition-colors">Solutions</Link>
+            <Link href="/product/solutions" className="hover:text-accent-blue transition-colors">Solutions</Link>
             <Link href="/contact" className="hover:text-accent-blue transition-colors">Contact</Link>
           </div>
         </div>

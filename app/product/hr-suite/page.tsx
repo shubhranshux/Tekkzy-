@@ -95,7 +95,7 @@ export default function HrSuitePage() {
         <div><h2>Build a workplace people love.</h2><p>See how Tekkzy HR Suite transforms the employee experience from day one.</p></div>
         <div className="cta-actions">
           <Link className="button" href="/#contact" style={{ background: "#e05690", borderColor: "#e05690" }}>Start Free Trial <ArrowRight size={16} /></Link>
-          <Link className="text-link" href="/products">View All Products <ArrowRight size={14} /></Link>
+          <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>
     </main>

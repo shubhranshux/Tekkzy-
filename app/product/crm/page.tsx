@@ -99,7 +99,7 @@ export default function CrmPage() {
         <div><h2>Start building better relationships today.</h2><p>Join 200+ businesses using Tekkzy CRM to close more deals and grow faster.</p></div>
         <div className="cta-actions">
           <Link className="button" href="/#contact">Start Free Trial <ArrowRight size={16} /></Link>
-          <Link className="text-link" href="/products">View All Products <ArrowRight size={14} /></Link>
+          <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>
     </main>

@@ -98,7 +98,7 @@ export default function AutomationPage() {
         <div><h2>Stop doing manually what can be automated.</h2><p>See how Tekkzy Automation can save your team hundreds of hours every month.</p></div>
         <div className="cta-actions">
           <Link className="button" href="/#contact" style={{ background: "#20a68c", borderColor: "#20a68c" }}>Start Automating <ArrowRight size={16} /></Link>
-          <Link className="text-link" href="/products">View All Products <ArrowRight size={14} /></Link>
+          <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>
     </main>

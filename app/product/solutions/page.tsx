@@ -157,7 +157,7 @@ export default function SolutionsIndexPage() {
               variants={fadeUp}
             >
               <Link
-                href={`/solutions/${s.slug}`}
+                href={`/product/solutions/${s.slug}`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <div

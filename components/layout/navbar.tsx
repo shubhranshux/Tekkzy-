@@ -73,9 +73,7 @@ export function Navbar({ showLogo = true }: NavbarProps) {
           </span>
           <span className="theme-toggle-label">{theme === "light" ? "Dark" : "Light"}</span>
         </button>
-        <Link href="/contact" className="login">
-          Login
-        </Link>
+
         <Link href="/contact" className="button button-small">
           Start a Project <ArrowRight size={14} />
         </Link>

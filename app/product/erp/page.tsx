@@ -123,7 +123,7 @@ export default function ErpPage() {
         <div><h2>Ready to modernize your operations?</h2><p>Get a personalized demo of Tekkzy ERP tailored to your industry and business size.</p></div>
         <div className="cta-actions">
           <Link className="button" href="/#contact">Schedule a Demo <ArrowRight size={16} /></Link>
-          <Link className="text-link" href="/products">View All Products <ArrowRight size={14} /></Link>
+          <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>
     </main>

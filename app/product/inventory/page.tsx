@@ -74,7 +74,7 @@ export default function InventoryPage() {
         <div><h2>Never run out of stock again.</h2><p>See how Tekkzy Inventory gives you complete control over your supply chain.</p></div>
         <div className="cta-actions">
           <Link className="button" href="/#contact" style={{ background: "#d97b1e", borderColor: "#d97b1e" }}>Start Tracking <ArrowRight size={16} /></Link>
-          <Link className="text-link" href="/products">View All Products <ArrowRight size={14} /></Link>
+          <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>
     </main>

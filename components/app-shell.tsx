@@ -162,6 +162,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               { label: "Home", href: "/" },
               { label: "About", href: "/about" },
               { label: "Product", href: "/product" },
+              { label: "Careers", href: "/careers" },
               { label: "Contact", href: "/contact" },
             ].map(({ label, href }) => {
               const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -186,9 +187,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </span>
               <span className="theme-toggle-label">{theme === "light" ? "Dark" : "Light"}</span>
             </button>
-            <Link href="/contact" className="login">
-              Login
-            </Link>
+
             <Link href="/contact" className="button button-small">
               Start a Project <ArrowRight size={14} />
             </Link>

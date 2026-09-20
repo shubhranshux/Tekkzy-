@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import DigitalMarketingSection from "@/components/product/digital-marketing-section";
 import {
   Activity,
@@ -115,12 +116,12 @@ const challengeItems: { icon: IconType; title: string; copy: string }[] = [
 
 const capabilities: { icon: IconType; title: string; copy: string; tint: string; href: string }[] = [
   { icon: Blocks, title: "Build", copy: "Build custom Tekkzy software, web, mobile, SaaS and business products.", tint: "blue", href: "/whats-possible" },
-  { icon: BriefcaseBusiness, title: "Operate", copy: "Tekkzy ERP, CRM, HR, finance, inventory and business operations.", tint: "green", href: "/products/erp" },
-  { icon: BrainCircuit, title: "Intelligence", copy: "Tekkzy AI, analytics, BI and intelligent automation built in.", tint: "purple", href: "/products/ai-assistant" },
+  { icon: BriefcaseBusiness, title: "Operate", copy: "Tekkzy ERP, CRM, HR, finance, inventory and business operations.", tint: "green", href: "/product/erp" },
+  { icon: BrainCircuit, title: "Intelligence", copy: "Tekkzy AI, analytics, BI and intelligent automation built in.", tint: "purple", href: "/product/ai-assistant" },
   { icon: Database, title: "Data", copy: "Collect, manage and analyze data with complete Tekkzy accuracy.", tint: "teal", href: "/solutions/data-layer" },
   { icon: Cloud, title: "Cloud", copy: "Scalable Tekkzy cloud infrastructure built for performance.", tint: "blue", href: "/solutions/cloud-infrastructure" },
-  { icon: LineChart, title: "SEO & Growth", copy: "Tekkzy SEO, search engine optimization, keyword research, on-page, off-page and technical SEO that drive organic traffic.", tint: "red", href: "/products/seo" },
-  { icon: ScanLine, title: "Digital Marketing", copy: "Tekkzy social media, PPC, content marketing, email campaigns and conversion optimization.", tint: "orange", href: "/products/digital-marketing" },
+  { icon: LineChart, title: "SEO & Growth", copy: "Tekkzy SEO, search engine optimization, keyword research, on-page, off-page and technical SEO that drive organic traffic.", tint: "red", href: "/product/seo" },
+  { icon: ScanLine, title: "Digital Marketing", copy: "Tekkzy social media, PPC, content marketing, email campaigns and conversion optimization.", tint: "orange", href: "/product/digital-marketing" },
 ];
 
 const architecture: { icon: IconType; name: string; copy: string }[] = [
@@ -144,16 +145,16 @@ const journey: { icon: IconType; title: string; copy: string }[] = [
   { icon: TrendingUp, title: "Scale", copy: "Scale with confidence as your business grows." },
 ];
 
-const products: { title: string; copy: string; type: string; accent: string; href: string }[] = [
-  { title: "ERP", copy: "Manage your entire business operations, finance, and resources with Tekkzy ERP.", type: "erp", accent: "#1e64f0", href: "/products/erp" },
-  { title: "CRM", copy: "Build stronger customer relationships, track deals, and grow with Tekkzy CRM.", type: "crm", accent: "#3f60ea", href: "/products/crm" },
-  { title: "AI Assistant", copy: "Ask questions, analyze data, and take action with Tekkzy AI Assistant.", type: "ai", accent: "#7157ee", href: "/products/ai-assistant" },
-  { title: "SEO", copy: "Rank higher on Google with Tekkzy SEO — keyword research, on-page optimization, technical audits, link building and organic growth strategies.", type: "analytics", accent: "#f59e0b", href: "/products/seo" },
-  { title: "Automation", copy: "Automate repetitive workflows, approvals, and processes with Tekkzy Automation.", type: "automation", accent: "#20a68c", href: "/products/automation" },
-  { title: "Analytics", copy: "Discover real-time insights with interactive Tekkzy Analytics dashboards.", type: "analytics", accent: "#4565cf", href: "/products/analytics" },
-  { title: "HR Suite", copy: "Manage employees, payroll, attendance, and performance in Tekkzy HR Suite.", type: "hr", accent: "#e05690", href: "/products/hr-suite" },
-  { title: "Inventory", copy: "Track stock levels, manage warehouses, and optimize supply chain with Tekkzy Inventory.", type: "inventory", accent: "#d97b1e", href: "/products/inventory" },
-  { title: "Digital Marketing", copy: "Plan campaigns, track conversions, and grow your audience with Tekkzy Digital Marketing.", type: "marketing", accent: "#2ba88e", href: "/products/digital-marketing" },
+const products: { title: string; copy: string; type: string; accent: string; href: string; image: string }[] = [
+  { title: "ERP", copy: "Manage your entire business operations, finance, and resources with Tekkzy ERP.", type: "erp", accent: "#1e64f0", href: "/product/erp", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" },
+  { title: "CRM", copy: "Build stronger customer relationships, track deals, and grow with Tekkzy CRM.", type: "crm", accent: "#3f60ea", href: "/product/crm", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
+  { title: "AI Assistant", copy: "Ask questions, analyze data, and take action with Tekkzy AI Assistant.", type: "ai", accent: "#7157ee", href: "/product/ai-assistant", image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" },
+  { title: "SEO", copy: "Rank higher on Google with Tekkzy SEO — keyword research, on-page optimization, technical audits, link building and organic growth strategies.", type: "analytics", accent: "#f59e0b", href: "/product/seo", image: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&q=80" },
+  { title: "Automation", copy: "Automate repetitive workflows, approvals, and processes with Tekkzy Automation.", type: "automation", accent: "#20a68c", href: "/product/automation", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" },
+  { title: "Analytics", copy: "Discover real-time insights with interactive Tekkzy Analytics dashboards.", type: "analytics", accent: "#4565cf", href: "/product/analytics", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" },
+  { title: "HR Suite", copy: "Manage employees, payroll, attendance, and performance in Tekkzy HR Suite.", type: "hr", accent: "#e05690", href: "/product/hr-suite", image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&q=80" },
+  { title: "Inventory", copy: "Track stock levels, manage warehouses, and optimize supply chain with Tekkzy Inventory.", type: "inventory", accent: "#d97b1e", href: "/product/inventory", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" },
+  { title: "Digital Marketing", copy: "Plan campaigns, track conversions, and grow your audience with Tekkzy Digital Marketing.", type: "marketing", accent: "#2ba88e", href: "/product/digital-marketing", image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80" },
 ];
 
 const testimonials = [
@@ -165,27 +166,23 @@ const testimonials = [
 ];
 
 const industries = [
-  { icon: Store, name: "Retail", copy: "Unified commerce and customer experiences", href: "/industries/retail" },
-  { icon: HeartPulse, name: "Healthcare", copy: "Digital healthcare and patient systems", href: "/industries/healthcare" },
-  { icon: LineChart, name: "Finance", copy: "Secure, compliant and high-performance systems", href: "/industries/finance" },
-  { icon: PackageCheck, name: "Manufacturing", copy: "Smart operations and supply chains", href: "/industries/manufacturing" },
-  { icon: PanelTop, name: "Real Estate", copy: "Manage properties and customer lifecycle", href: "/industries/real-estate" },
-  { icon: ShoppingBag, name: "Logistics", copy: "Optimize fleet, routes and networks", href: "/industries/logistics" },
-  { icon: UsersRound, name: "Education", copy: "Learning platforms and student systems", href: "/industries/education" },
+  { icon: Store, name: "Retail", copy: "Unified commerce and customer experiences", href: "/industries/retail", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80" },
+  { icon: HeartPulse, name: "Healthcare", copy: "Digital healthcare and patient systems", href: "/industries/healthcare", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80" },
+  { icon: LineChart, name: "Finance", copy: "Secure, compliant and high-performance systems", href: "/industries/finance", image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80" },
+  { icon: PackageCheck, name: "Manufacturing", copy: "Smart operations and supply chains", href: "/industries/manufacturing", image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=400&q=80" },
+  { icon: PanelTop, name: "Real Estate", copy: "Manage properties and customer lifecycle", href: "/industries/real-estate", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80" },
+  { icon: ShoppingBag, name: "Logistics", copy: "Optimize fleet, routes and networks", href: "/industries/logistics", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80" },
+  { icon: UsersRound, name: "Education", copy: "Learning platforms and student systems", href: "/industries/education", image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&q=80" },
 ];
 
-function ProductVisual({ type, accent }: { type: string; accent: string }) {
+function ProductVisual({ type, accent, image }: { type: string; accent: string; image: string }) {
   return (
     <div className={`product-visual ${type}`} style={{ "--accent": accent } as React.CSSProperties}>
-      <div className="visual-top"><i /><i /><i /><span /></div>
-      <div className="visual-sidebar"><b /><b /><b /><b /><b /><b /></div>
-      {type === "analytics" && <><div className="chart-bars"><i /><i /><i /><i /><i /><i /><i /></div><div className="chart-line" /><div className="chart-area" /></>}
-      {type === "ai" && <><div className="chat-dot" /><div className="chat-bubble big" /><div className="chat-bubble small" /><div className="chat-bubble reply" /></>}
-      {type === "automation" && <><div className="flow-node n1" /><div className="flow-node n2" /><div className="flow-node n3" /><div className="flow-node n4" /><div className="flow-line l1" /><div className="flow-line l2" /><div className="flow-line l3" /></>}
-      {(type === "erp" || type === "crm") && <><div className="visual-table"><i /><i /><i /><i /><i /></div><div className="donut" /><div className="mini-stat" /></>}
-      {type === "hr" && <><div className="hr-profile" /><div className="hr-profile p2" /><div className="hr-profile p3" /><div className="hr-bar" /><div className="hr-bar b2" /><div className="hr-bar b3" /></>}
-      {type === "inventory" && <><div className="inv-box" /><div className="inv-box x2" /><div className="inv-box x3" /><div className="inv-meter" /><div className="inv-label" /></>}
-      {type === "marketing" && <><div className="mkt-funnel" /><div className="mkt-bar" /><div className="mkt-bar m2" /><div className="mkt-bar m3" /><div className="mkt-dot" /></>}
+      <div className="visual-top" style={{ position: 'relative', zIndex: 3 }}><i /><i /><i /><span /></div>
+      <div className="visual-image" style={{ position: 'absolute', inset: 0, top: '28px', zIndex: 1 }}>
+        <Image src={image} alt={type} fill sizes="300px" style={{ objectFit: 'cover' }} />
+        <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(0deg, ${accent}33, transparent)` }} />
+      </div>
     </div>
   );
 }
@@ -223,28 +220,28 @@ export default function Home() {
           
           <svg className="diagram-lines" viewBox="0 0 800 600" preserveAspectRatio="none">
             {/* Top (Digital Experience) */}
-            <path d="M 400 300 L 400 120" stroke="#a0b8fa" strokeWidth="2" fill="none" />
-            <circle cx="400" cy="120" r="4" fill="#a0b8fa" />
+            <motion.path d="M 400 300 L 400 120" stroke="#a0b8fa" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.circle cx="400" cy="120" r="4" fill="#a0b8fa" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
             
             {/* Top Left (Business Systems) */}
-            <path d="M 330 300 C 230 300, 230 200, 230 200" stroke="#a7e0c4" strokeWidth="2" fill="none" />
-            <circle cx="230" cy="200" r="4" fill="#a7e0c4" />
+            <motion.path d="M 330 300 C 230 300, 230 200, 230 200" stroke="#a7e0c4" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.circle cx="230" cy="200" r="4" fill="#a7e0c4" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.7, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
             
             {/* Bottom Left (Data) */}
-            <path d="M 330 340 C 210 340, 210 400, 210 400" stroke="#a7e0c4" strokeWidth="2" fill="none" />
-            <circle cx="210" cy="400" r="4" fill="#a7e0c4" />
+            <motion.path d="M 330 340 C 210 340, 210 400, 210 400" stroke="#a7e0c4" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 0.4 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.circle cx="210" cy="400" r="4" fill="#a7e0c4" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.9, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
             
             {/* Top Right (Intelligence) */}
-            <path d="M 470 290 C 580 290, 580 220, 580 220" stroke="#d5c8fa" strokeWidth="2" fill="none" />
-            <circle cx="580" cy="220" r="4" fill="#d5c8fa" />
+            <motion.path d="M 470 290 C 580 290, 580 220, 580 220" stroke="#d5c8fa" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 0.6 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.circle cx="580" cy="220" r="4" fill="#d5c8fa" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 2.1, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
             
             {/* Bottom Right (Automation) */}
-            <path d="M 470 350 C 560 350, 560 410, 560 410" stroke="#fbdec7" strokeWidth="2" fill="none" />
-            <circle cx="560" cy="410" r="4" fill="#fbdec7" />
+            <motion.path d="M 470 350 C 560 350, 560 410, 560 410" stroke="#fbdec7" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 0.8 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.circle cx="560" cy="410" r="4" fill="#fbdec7" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 2.3, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
             
             {/* Bottom (Cloud & Infrastructure) */}
-            <path d="M 400 380 L 400 470" stroke="#a0b8fa" strokeWidth="2" fill="none" />
-            <circle cx="400" cy="470" r="4" fill="#a0b8fa" />
+            <motion.path d="M 400 380 L 400 470" stroke="#a0b8fa" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 1.0 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.circle cx="400" cy="470" r="4" fill="#a0b8fa" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 2.5, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
           </svg>
 
           <motion.div className="diagram-node digital" animate={reduced ? {} : { y: [-2, 2] }} transition={{...floatTransition, delay: 0}}>
@@ -289,7 +286,7 @@ export default function Home() {
 
       <section id="solution" className="solution-section section-shell">
         <div className="solution-sticky-left">
-          <SectionIntro eyebrow="THE SOLUTION" title={<>One intelligent platform.<br />Everything connected.</>} copy="Tekkzy Intelligent Cloud brings everything together—your apps, data, AI, and automation—so you can move faster, work smarter and grow confidently." link="Explore Platform" href="/solutions" />
+          <SectionIntro eyebrow="THE SOLUTION" title={<>One intelligent platform.<br />Everything connected.</>} copy="Tekkzy Intelligent Cloud brings everything together—your apps, data, AI, and automation—so you can move faster, work smarter and grow confidently." link="Explore Platform" href="/product/solutions" />
         </div>
         <div className="solution-scroll-right">
           <Reveal className="layer-card experience-card">
@@ -398,7 +395,7 @@ export default function Home() {
           <Reveal className="products-heading"><SectionIntro eyebrow="POWERFUL PRODUCTS, ENDLESS POSSIBILITIES" title={<>Everything you need to build,<br />operate and grow with Tekkzy.</>} copy="Choose the connected products that solve today&apos;s challenge—and add new capabilities as your ambition grows." link="View All Solutions" /><div className="scroll-cue"><span>Scroll to explore</span><i><b /></i></div></Reveal>
           <div className="products-rail-viewport">
             <div className="products-grid" data-horizontal-track>
-              {products.map((product, index) => <Reveal key={product.title} delay={index * 0.06} className="product-card"><div data-gsap-card><ProductVisual type={product.type} accent={product.accent} /></div><span className="product-index">{String(index + 1).padStart(2, '0')}</span><h3>{product.title}</h3><p>{product.copy}</p><Link href={product.href}>Explore <ArrowRight size={13} /></Link></Reveal>)}
+              {products.map((product, index) => <Reveal key={product.title} delay={index * 0.06} className="product-card"><div data-gsap-card><ProductVisual type={product.type} accent={product.accent} image={product.image} /></div><span className="product-index">{String(index + 1).padStart(2, '0')}</span><h3>{product.title}</h3><p>{product.copy}</p><Link href={product.href}>Explore <ArrowRight size={13} /></Link></Reveal>)}
             </div>
           </div>
         </div>
@@ -452,7 +449,7 @@ export default function Home() {
       <section id="industries" className="industries-section section-shell">
         <Reveal><SectionIntro eyebrow="BUILT FOR EVERY INDUSTRY" title={<>Tekkzy industry-focused solutions.<br />Purpose-built for you.</>} link="View All Industries" /></Reveal>
         <div className="industry-grid">
-          {industries.map(({ icon: Icon, name, copy, href }, index) => <Reveal key={name} delay={index * 0.04} className="industry-card"><div className="industry-art"><Icon /><span /><span /><span /></div><h3>{name}</h3><p>{copy}</p><Link href={href}><ArrowRight size={15} /></Link></Reveal>)}
+          {industries.map(({ icon: Icon, name, copy, href, image }, index) => <Reveal key={name} delay={index * 0.04} className="industry-card"><div className="industry-art"><Image src={image} alt={name} fill sizes="(max-width: 780px) 50vw, 200px" style={{ objectFit: 'cover' }} /><Icon /></div><h3>{name}</h3><p>{copy}</p><Link href={href}><ArrowRight size={15} /></Link></Reveal>)}
         </div>
       </section>
 

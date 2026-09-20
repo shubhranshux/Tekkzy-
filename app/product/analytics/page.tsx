@@ -104,7 +104,7 @@ export default function AnalyticsPage() {
         <div><h2>Turn your data into decisions.</h2><p>See Tekkzy Analytics in action with a live demo using your own data.</p></div>
         <div className="cta-actions">
           <Link className="button" href="/#contact">Get Live Demo <ArrowRight size={16} /></Link>
-          <Link className="text-link" href="/products">View All Products <ArrowRight size={14} /></Link>
+          <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>
     </main>

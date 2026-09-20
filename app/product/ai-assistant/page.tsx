@@ -92,7 +92,7 @@ export default function AiAssistantPage() {
         <div><h2>Put AI to work for your business.</h2><p>See how Tekkzy AI Assistant can transform how your team operates, decides, and grows.</p></div>
         <div className="cta-actions">
           <Link className="button" href="/#contact">Request AI Demo <ArrowRight size={16} /></Link>
-          <Link className="text-link" href="/products">View All Products <ArrowRight size={14} /></Link>
+          <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>
     </main>

@@ -98,7 +98,7 @@ export default function SeoPage() {
         <div><h2>Ready to own page one?</h2><p>Get a free SEO audit and discover how much organic traffic you&apos;re leaving on the table.</p></div>
         <div className="cta-actions">
           <Link className="button" href="/#contact" style={{ background: "#f59e0b", borderColor: "#f59e0b" }}>Get Free SEO Audit <ArrowRight size={16} /></Link>
-          <Link className="text-link" href="/products">View All Products <ArrowRight size={14} /></Link>
+          <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>
     </main>
