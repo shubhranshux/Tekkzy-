@@ -19,7 +19,6 @@ import {
   Database,
   Eye,
   Globe2,
-  Handshake,
   HeartPulse,
   Layers3,
   LineChart,
@@ -157,13 +156,7 @@ const products: { title: string; copy: string; type: string; accent: string; hre
   { title: "Digital Marketing", copy: "Plan campaigns, track conversions, and grow your audience with Tekkzy Digital Marketing.", type: "marketing", accent: "#2ba88e", href: "/product/digital-marketing", image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80" },
 ];
 
-const testimonials = [
-  { quote: "Tekkzy Intelligent Cloud transformed how we operate. Everything is connected, automated and scalable.", name: "Rajesh Sharma", role: "CTO, TechCorp", logo: "TechCorp", image: "https://i.pravatar.cc/150?u=rajesh" },
-  { quote: "The automation and AI capabilities helped us save hundreds of hours every month and improved accuracy.", name: "Priya Mehta", role: "Head of Operations, NextGen", logo: "NextGen", image: "https://i.pravatar.cc/150?u=priya" },
-  { quote: "We finally have real visibility into our business. The dashboards and insights are game-changing.", name: "Arjun Patel", role: "COO, Quantum", logo: "Quantum", image: "https://i.pravatar.cc/150?u=arjun" },
-  { quote: "Their team understood our business and built a solution that fits perfectly. Support has been excellent.", name: "Sneha Iyer", role: "Director, Velocity", logo: "Velocity", image: "https://i.pravatar.cc/150?u=sneha" },
-  { quote: "The platform scaled effortlessly with our traffic spikes. A robust and reliable architecture.", name: "David Chen", role: "VP Engineering, Synergy", logo: "Synergy", image: "https://i.pravatar.cc/150?u=david" },
-];
+
 
 const industries = [
   { icon: Store, name: "Retail", copy: "Unified commerce and customer experiences", href: "/industries/retail", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80" },
@@ -401,50 +394,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="social-proof section-shell">
-        <Reveal><span className="eyebrow">TRUSTED BY BUSINESSES WORLDWIDE</span><h2>Real impact. Real results.</h2></Reveal>
-        <div className="logo-row" aria-label="Customer logos">{["TechCorp", "NextGen", "Quantum", "Velocity", "Synergy", "CleverSoft", "BrightMind"].map((brand) => <span key={brand}><Handshake size={17} />{brand}</span>)}</div>
-        <div className="testimonial-carousel-wrapper">
-          <div className="testimonial-track">
-            <div className="testimonial-group">
-              {testimonials.map(({ quote, name, role, logo, image }, index) => (
-                <div key={name} className="testimonial">
-                  <div className="testimonial-quote">
-                    <span className="quote-mark">“</span>
-                    <p>{quote}</p>
-                  </div>
-                  <div className="testimonial-author">
-                    <img src={image} alt={name} className="author-img" width={48} height={48} loading="lazy" />
-                    <div className="author-info">
-                      <strong>{name}</strong>
-                      <small>{role}</small>
-                    </div>
-                    <b className="author-logo">{logo}</b>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="testimonial-group" aria-hidden="true">
-              {testimonials.map(({ quote, name, role, logo, image }, index) => (
-                <div key={name + "-dup"} className="testimonial">
-                  <div className="testimonial-quote">
-                    <span className="quote-mark">“</span>
-                    <p>{quote}</p>
-                  </div>
-                  <div className="testimonial-author">
-                    <img src={image} alt={name} className="author-img" width={48} height={48} loading="lazy" />
-                    <div className="author-info">
-                      <strong>{name}</strong>
-                      <small>{role}</small>
-                    </div>
-                    <b className="author-logo">{logo}</b>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <section id="industries" className="industries-section section-shell">
         <Reveal><SectionIntro eyebrow="BUILT FOR EVERY INDUSTRY" title={<>Tekkzy industry-focused solutions.<br />Purpose-built for you.</>} link="View All Industries" /></Reveal>
@@ -461,12 +411,6 @@ export default function Home() {
       </section>
 
 
-      <button className="tekkbot-fab" aria-label="Ask TekkBot AI" title="Ask TekkBot AI">
-        <span className="tekkbot-pulse" />
-        <span className="tekkbot-pulse delay" />
-        <Bot size={24} />
-        <span className="tekkbot-label">Ask TekkBot AI</span>
-      </button>
     </main>
   );
 }

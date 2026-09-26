@@ -29,7 +29,7 @@ export default function LandingMotion({ children }: { children: React.ReactNode 
       if (heroNote.length) gsap.to(heroNote, { y: -7, duration: 2.3, repeat: -1, yoyo: true, ease: "sine.inOut" });
       if (floatingTiles.length) gsap.to(floatingTiles, { y: -8, duration: 2.4, repeat: -1, yoyo: true, stagger: .18, ease: "sine.inOut" });
 
-      gsap.utils.toArray<HTMLElement>(".landing-section, .trust-strip, .landing-cta, .careers-intro, .pathways-section, .intern-journey, .disciplines-section, .growth-section, .project-banner, .jobs-section, .faq-section, .careers-final").forEach((section) => {
+      gsap.utils.toArray<HTMLElement>(".landing-section, .trust-strip, .careers-intro, .pathways-section, .intern-journey, .disciplines-section, .growth-section, .project-banner, .jobs-section, .faq-section, .careers-final").forEach((section) => {
         gsap.from(Array.from(section.children), {
           scrollTrigger: { trigger: section, start: "top 82%", once: true },
           opacity: 0,
@@ -48,6 +48,54 @@ export default function LandingMotion({ children }: { children: React.ReactNode 
         cleanupListeners.push(() => {
           card.removeEventListener("mouseenter", onEnter);
           card.removeEventListener("mouseleave", onLeave);
+        });
+      });
+
+      const landingCardGroups = [
+        { selector: ".hiw-step-item", trigger: ".hiw-section", y: 24, stagger: .09 },
+        { selector: ".value-card", trigger: ".values-section", y: 20, stagger: .08 },
+        { selector: ".pricing-card-enhanced", trigger: ".pricing-section", y: 26, stagger: .1 },
+        { selector: ".testimonial-card", trigger: ".testimonial-carousel-section", y: 18, stagger: .07 },
+        { selector: ".faq-item", trigger: ".faq-section", y: 16, stagger: .07 },
+      ];
+
+      landingCardGroups.forEach(({ selector, trigger, y, stagger }) => {
+        const cards = select(selector);
+        const triggerElement = root.current?.querySelector(trigger);
+        if (!cards.length || !triggerElement) return;
+
+        gsap.from(cards, {
+          scrollTrigger: { trigger: triggerElement, start: "top 78%", once: true },
+          opacity: 0,
+          y,
+          duration: .62,
+          stagger,
+          ease: "power3.out",
+          clearProps: "transform,opacity",
+        });
+      });
+
+      const dashboard = root.current?.querySelector(".hero-dashboard-frame");
+      if (dashboard) {
+        gsap.to(dashboard, {
+          y: -8,
+          rotate: -.35,
+          duration: 3.4,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+        });
+      }
+
+      const valueIcons = select(".value-icon, .hiw-step-icon-ring, .pricing-card-icon-wrap");
+      valueIcons.forEach((icon) => {
+        const enter = () => gsap.to(icon, { rotate: 7, scale: 1.09, duration: .24, ease: "power2.out", overwrite: "auto" });
+        const leave = () => gsap.to(icon, { rotate: 0, scale: 1, duration: .36, ease: "elastic.out(1, .5)", overwrite: "auto" });
+        icon.parentElement?.addEventListener("mouseenter", enter);
+        icon.parentElement?.addEventListener("mouseleave", leave);
+        cleanupListeners.push(() => {
+          icon.parentElement?.removeEventListener("mouseenter", enter);
+          icon.parentElement?.removeEventListener("mouseleave", leave);
         });
       });
 

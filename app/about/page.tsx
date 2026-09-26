@@ -223,63 +223,66 @@ export default function AboutPage() {
 
 
       {/* ═══════════════ WHAT IS TEKKZY ═══════════════ */}
-      <section className="about-what section-shell">
-        <div className="about-what-grid">
-          <motion.div className="about-what-left" {...fadeLeft(0)}>
-            <span className="eyebrow">WHAT IS TEKKZY</span>
-            <h2>
-              The <span>Connected</span> Business Ecosystem
-            </h2>
-            <p>
-              Tekkzy brings essential business capabilities together in one
-              connected ecosystem, including ERP, CRM, AI Assistant, Automation,
-              Analytics, HR, Inventory, Digital Marketing, and SEO.
-            </p>
-            <p>
-              Instead of juggling disconnected tools, Tekkzy provides a unified
-              technology platform that helps organizations reduce friction and
-              manage their operations more efficiently.
-            </p>
-          </motion.div>
-          <motion.div className="about-what-right" {...fadeRight(0.15)}>
-            <div className="about-what-visual">
-              <div className="about-orbit-ring ring-1" />
-              <div className="about-orbit-ring ring-2" />
-              <div className="about-orbit-ring ring-3" />
-              <div className="about-core-badge">
-                <Globe size={28} />
-                <span>Tekkzy</span>
+      <section className="about-what">
+        <div className="about-what-inner section-shell">
+          <div className="about-what-grid">
+            <motion.div className="about-what-left" {...fadeLeft(0)}>
+              <span className="eyebrow">WHAT IS TEKKZY</span>
+              <h2>
+                The <span>Connected</span> Business Ecosystem
+              </h2>
+              <p>
+                Tekkzy brings essential business capabilities together in one
+                connected ecosystem, including ERP, CRM, AI Assistant, Automation,
+                Analytics, HR, Inventory, Digital Marketing, and SEO.
+              </p>
+              <p>
+                Instead of juggling disconnected tools, Tekkzy provides a unified
+                technology platform that helps organizations reduce friction and
+                manage their operations more efficiently.
+              </p>
+            </motion.div>
+            <motion.div className="about-what-right" {...fadeRight(0.15)}>
+              <div className="about-what-visual">
+                <div className="about-orbit-ring ring-1" />
+                <div className="about-orbit-ring ring-2" />
+                <div className="about-orbit-ring ring-3" />
+                <div className="about-core-badge">
+                  <Globe size={28} />
+                  <span>Tekkzy</span>
+                </div>
+                {/* floating module pills */}
+                {["ERP", "CRM", "AI", "HR", "SEO"].map((label, i) => (
+                  <motion.span
+                    key={label}
+                    className={`about-float-pill fp-${i}`}
+                    animate={
+                      reduced
+                        ? {}
+                        : {
+                            y: [0, -8, 0],
+                            rotate: [0, i % 2 === 0 ? 3 : -3, 0],
+                          }
+                    }
+                    transition={{
+                      duration: 3 + i * 0.4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    {label}
+                  </motion.span>
+                ))}
               </div>
-              {/* floating module pills */}
-              {["ERP", "CRM", "AI", "HR", "SEO"].map((label, i) => (
-                <motion.span
-                  key={label}
-                  className={`about-float-pill fp-${i}`}
-                  animate={
-                    reduced
-                      ? {}
-                      : {
-                          y: [0, -8, 0],
-                          rotate: [0, i % 2 === 0 ? 3 : -3, 0],
-                        }
-                  }
-                  transition={{
-                    duration: 3 + i * 0.4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  {label}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ═══════════════ WHY CHOOSE ═══════════════ */}
-      <section className="about-why section-shell">
-        <motion.div className="about-why-header" {...fade(0)}>
+      <section className="about-why">
+        <div className="about-why-inner section-shell">
+          <motion.div className="about-why-header" {...fade(0)}>
           <span className="eyebrow">WHY CHOOSE TEKKZY</span>
           <h2>
             Built for Modern <span>Business</span>
@@ -306,7 +309,8 @@ export default function AboutPage() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ═══════════════ SECURITY ═══════════════ */}
       <section className="about-security">
@@ -324,7 +328,7 @@ export default function AboutPage() {
               experiences through proven security practices and reliable
               infrastructure.
             </p>
-            <Link href="/contact" className="button" style={{ marginTop: 28 }}>
+            <Link href="/about/security" className="button" style={{ marginTop: 28 }}>
               Learn More <ArrowRight size={15} />
             </Link>
           </motion.div>
@@ -418,83 +422,85 @@ export default function AboutPage() {
       </section>
 
       {/* ═══════════════ OUR VALUES ═══════════════ */}
-      <section className="about-values section-shell">
-        <div className="about-values-grid">
-          <motion.div className="about-values-left" {...fadeLeft(0)}>
-            <span className="pill about-values-pill">
-              <span className="dot"></span> OUR VALUES
-            </span>
-            <h2>
-              Principles That<br />
-              <span>Guide Us</span>
-            </h2>
-            <p>
-              These values shape how we build, work, and support the businesses
-              we serve. They keep us focused on what truly matters.
-            </p>
-            <div className="about-values-footer-line">
-              <span className="line"></span>
-              <span className="text">PEOPLE + PURPOSE + PROGRESS</span>
+      <section className="about-values">
+        <div className="about-values-inner section-shell">
+          <div className="about-values-grid">
+            <motion.div className="about-values-left" {...fadeLeft(0)}>
+              <span className="pill about-values-pill">
+                <span className="dot"></span> OUR VALUES
+              </span>
+              <h2>
+                Principles That<br />
+                <span>Guide Us</span>
+              </h2>
+              <p>
+                These values shape how we build, work, and support the businesses
+                we serve. They keep us focused on what truly matters.
+              </p>
+              <div className="about-values-footer-line">
+                <span className="line"></span>
+                <span className="text">PEOPLE + PURPOSE + PROGRESS</span>
+              </div>
+              {/* Corner decorative text matching the design */}
+              <div className="about-values-corner-text about-values-corner-left">
+                <span>A BRIGHTER</span>
+                <span>TOMORROW</span>
+                <span>TOGETHER</span>
+              </div>
+            </motion.div>
+            
+            <div className="about-values-cards">
+              {[
+                {
+                  num: "01",
+                  title: "Customer Focus",
+                  desc: "Your success is our priority. We listen, understand, and build with your goals in mind.",
+                  icon: Users,
+                  theme: "blue",
+                },
+                {
+                  num: "02",
+                  title: "Innovation",
+                  desc: "We embrace what's next. We explore new ideas and technologies to create smarter solutions.",
+                  icon: Zap,
+                  theme: "purple",
+                },
+                {
+                  num: "03",
+                  title: "Simplicity",
+                  desc: "Powerful technology should be easy to use. We keep things simple, practical, and effective.",
+                  icon: Layers,
+                  theme: "green",
+                },
+                {
+                  num: "04",
+                  title: "Trust",
+                  desc: "We build for the long term. We believe in transparency, reliability, and lasting partnerships.",
+                  icon: Shield,
+                  theme: "orange",
+                },
+              ].map((val, i) => (
+                <motion.div
+                  key={val.num}
+                  className={`about-values-card theme-${val.theme}`}
+                  {...fade(i * 0.1)}
+                >
+                  <div className="about-values-icon">
+                    <val.icon size={20} />
+                  </div>
+                  <div className="about-values-num">{val.num}</div>
+                  <h3>{val.title}</h3>
+                  <div className="about-values-divider"></div>
+                  <p>{val.desc}</p>
+                </motion.div>
+              ))}
             </div>
-            {/* Corner decorative text matching the design */}
-            <div className="about-values-corner-text about-values-corner-left">
-              <span>A BRIGHTER</span>
-              <span>TOMORROW</span>
-              <span>TOGETHER</span>
-            </div>
-          </motion.div>
-          
-          <div className="about-values-cards">
-            {[
-              {
-                num: "01",
-                title: "Customer Focus",
-                desc: "Your success is our priority. We listen, understand, and build with your goals in mind.",
-                icon: Users,
-                theme: "blue",
-              },
-              {
-                num: "02",
-                title: "Innovation",
-                desc: "We embrace what's next. We explore new ideas and technologies to create smarter solutions.",
-                icon: Zap,
-                theme: "purple",
-              },
-              {
-                num: "03",
-                title: "Simplicity",
-                desc: "Powerful technology should be easy to use. We keep things simple, practical, and effective.",
-                icon: Layers,
-                theme: "green",
-              },
-              {
-                num: "04",
-                title: "Trust",
-                desc: "We build for the long term. We believe in transparency, reliability, and lasting partnerships.",
-                icon: Shield,
-                theme: "orange",
-              },
-            ].map((val, i) => (
-              <motion.div
-                key={val.num}
-                className={`about-values-card theme-${val.theme}`}
-                {...fade(i * 0.1)}
-              >
-                <div className="about-values-icon">
-                  <val.icon size={20} />
-                </div>
-                <div className="about-values-num">{val.num}</div>
-                <h3>{val.title}</h3>
-                <div className="about-values-divider"></div>
-                <p>{val.desc}</p>
-              </motion.div>
-            ))}
-          </div>
 
-          <div className="about-values-corner-text about-values-corner-right">
-            <span>TECHNOLOGY</span>
-            <span>FOR PEOPLE</span>
-            <span className="line"></span>
+            <div className="about-values-corner-text about-values-corner-right">
+              <span>TECHNOLOGY</span>
+              <span>FOR PEOPLE</span>
+              <span className="line"></span>
+            </div>
           </div>
         </div>
       </section>

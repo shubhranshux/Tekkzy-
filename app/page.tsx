@@ -7,10 +7,8 @@ import {
   ChevronRight,
   CircleCheck,
   Cloud,
-  Code2,
   Cpu,
   Database,
-  Gem,
   Heart,
   Layers3,
   LineChart,
@@ -20,6 +18,7 @@ import {
   Rocket,
   ShieldCheck,
   Sparkles,
+  Star,
   Users,
   Workflow,
   Zap,
@@ -27,21 +26,29 @@ import {
 import WhoWeAre from "@/components/about/who-we-are";
 import LandingMotion from "@/components/landing/landing-motion";
 import ProductEcosystem from "@/components/landing/product-ecosystem";
+import HowItWorksSection from "@/components/landing/how-it-works";
+import TestimonialsSection from "@/components/landing/testimonials-section";
+import PrinciplesSection from "@/components/landing/principles-section";
+import PricingSection from "@/components/landing/pricing-section";
+import FaqSection from "@/components/landing/faq-section";
 
 const products = ["ERP", "CRM", "HR Suite", "Inventory", "Analytics", "AI Assistant", "Automation", "Digital Marketing", "SEO"];
-const trusted = ["Novara", "Lumen", "Piotra", "Cloudify", "Zenith", "Orbit", "Nexora", "Velora"];
+const clientLogos = [
+  { name: "Vedanta", src: "/logos/vedanta.jpeg" },
+  { name: "Fitness World 2.0", src: "/logos/fitness-world.png" },
+  { name: "Hotel MM Royal Palace", src: "/logos/mm-royal-palace.png" },
+  { name: "Hangout Restro Cafe", src: "/logos/hangout.jpeg" },
+  { name: "Manas Restaurant & Cafe", src: "/logos/manas.jpeg" },
+  { name: "Onebite", src: "/logos/onebite.png" },
+  { name: "Pabitra Electricals", src: "/logos/pabitra.png" },
+  { name: "Shribarenyam", src: "/logos/shribarenyam.jpeg" },
+];
 const values = [
   { title: "Connected Solutions", text: "Everything works together across your business.", icon: Network, tone: "blue" },
   { title: "AI Automation", text: "Work smarter with intelligent workflows.", icon: Sparkles, tone: "violet" },
   { title: "Business Intelligence", text: "See clearly. Decide confidently.", icon: BarChart3, tone: "green" },
   { title: "Scalable Technology", text: "Built to grow with you.", icon: Layers3, tone: "orange" },
   { title: "People Experience", text: "Simple tools your teams love.", icon: Heart, tone: "pink" },
-];
-
-const plans = [
-  { name: "Basic", price: "₹1,000", text: "For small teams starting their digital journey.", features: ["Core features", "Email support", "Standard integrations", "Simple reporting"], tone: "basic" },
-  { name: "Standard", price: "₹2,500", text: "Ideal for growing businesses that need more power.", features: ["Everything in Basic", "Team collaboration tools", "Priority support", "Analytics and reports"], tone: "standard", popular: true },
-  { name: "Advanced", price: "₹5,000", text: "For larger teams with advanced needs.", features: ["Everything in Standard", "Advanced automation", "API access", "24/7 support"], tone: "advanced" },
 ];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -65,43 +72,198 @@ export default function HomePage() {
     <LandingMotion><div className="landing-page" id="top">
       <section className="landing-hero">
         <div className="landing-hero-copy">
-          <SectionLabel>Intelligent Cloud Platform</SectionLabel>
+          <div className="hero-badge-pill">
+            <span className="hero-badge-glow" />
+            <Sparkles size={13} className="hero-badge-icon" />
+            <span>Intelligent Enterprise Cloud Suite</span>
+            <ChevronRight size={13} className="hero-badge-arrow" />
+          </div>
           <h1>Smart Technology<br />for a <span>Stronger<br />Tomorrow</span></h1>
-          <p>Empower your business with intelligent, connected, and scalable technology designed to simplify complexity and accelerate growth.</p>
-          <div className="landing-actions"><Link className="landing-primary" href="/contact">Get Started <ArrowRight size={15} /></Link><button className="landing-video"><span><Play size={12} fill="currentColor" /></span> Watch Video</button></div>
-          <div className="hero-proof"><span><CircleCheck size={15} /> AI-Driven Platforms</span><span><Zap size={15} /> Built for Growth</span><span><Users size={15} /> People-Centric</span></div>
+          <p>Empower your business with intelligent, connected, and scalable technology. From ERP &amp; POS to AI automation and real-time analytics, Tekkzy simplifies complexity to accelerate growth.</p>
+          <div className="landing-actions">
+            <Link className="landing-primary hero-btn-glow" href="/contact">
+              <span>Start Free Trial</span>
+              <ArrowRight size={15} />
+            </Link>
+            <Link className="landing-video" href="/product">
+              <span><Play size={12} fill="currentColor" /></span>
+              <span>Explore Platform</span>
+            </Link>
+          </div>
+
+          <div className="hero-social-proof">
+            <div className="hero-client-avatars">
+              <span className="client-avatar-pill" title="Vedanta">
+                <Image src="/logos/vedanta.jpeg" alt="Vedanta" width={22} height={22} />
+              </span>
+              <span className="client-avatar-pill" title="Fitness World 2.0">
+                <Image src="/logos/fitness-world.png" alt="Fitness World" width={22} height={22} />
+              </span>
+              <span className="client-avatar-pill" title="Hotel MM Royal Palace">
+                <Image src="/logos/mm-royal-palace.png" alt="MM Royal Palace" width={22} height={22} />
+              </span>
+              <span className="client-avatar-pill" title="Onebite">
+                <Image src="/logos/onebite.png" alt="Onebite" width={22} height={22} />
+              </span>
+            </div>
+            <div className="hero-proof-text">
+              <div className="hero-proof-stars">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} size={11} className="star-solid" />
+                ))}
+                <strong>4.9 / 5.0</strong>
+              </div>
+              <span>Trusted by 150+ organizations across industries</span>
+            </div>
+          </div>
+
+          <div className="hero-proof">
+            <span><CircleCheck size={14} /> AI-Driven Automation</span>
+            <span><Zap size={14} /> 99.99% Cloud Uptime</span>
+            <span><ShieldCheck size={14} /> Enterprise Security</span>
+          </div>
         </div>
+
         <div className="landing-hero-art">
           <div className="hero-grid-glow" />
-          <div className="hero-photo"><Image src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Tekkzy team building with technology" fill priority sizes="(max-width: 780px) 94vw, 54vw" style={{ objectFit: "cover", objectPosition: "50% 40%" }} /></div>
-          <div className="hero-card hero-card-top"><span className="hero-card-icon"><Sparkles size={15} /></span><small>AI Assistant</small><b>Always on</b></div>
-          <div className="hero-card hero-card-chart"><small>Business Growth</small><b>+32%</b><div className="hero-sparkline"><i /><i /><i /><i /><i /><i /></div></div>
-          <div className="hero-card hero-card-bottom"><small>Real Revenue</small><b>₹12,40,000</b><span>+18.4% this month</span></div>
-          <div className="hero-note">Technology<br />that works<br /><i>for people</i><svg viewBox="0 0 100 18"><path d="M2 14C28 4 61 2 98 9" /></svg></div>
+          <div className="hero-mesh-orb hero-mesh-orb-1" />
+          <div className="hero-mesh-orb hero-mesh-orb-2" />
+
+          {/* Glassmorphic Dashboard Showcase */}
+          <div className="hero-photo hero-dashboard-frame">
+            <div className="hero-dash-header">
+              <div className="hero-dash-dots">
+                <span className="dot-red" />
+                <span className="dot-yellow" />
+                <span className="dot-green" />
+              </div>
+              <div className="hero-dash-search">
+                <Sparkles size={11} />
+                <span>Tekkzy AI Copilot: Real-time business intelligence</span>
+              </div>
+              <div className="hero-dash-status">
+                <span className="status-live-dot" />
+                <small>Live</small>
+              </div>
+            </div>
+
+            <div className="hero-dash-body">
+              <div className="dash-overview-top">
+                <div>
+                  <small>Operations Hub</small>
+                  <h4>Enterprise Overview</h4>
+                </div>
+                <div className="dash-sync-badge">
+                  <span>99.98% Synchronized</span>
+                </div>
+              </div>
+
+              <div className="dash-kpi-row">
+                <div className="dash-kpi-item">
+                  <small>Monthly Volume</small>
+                  <strong>₹24,80,000</strong>
+                  <em>+28.4%</em>
+                </div>
+                <div className="dash-kpi-item">
+                  <small>Workflows Saved</small>
+                  <strong>142 hrs</strong>
+                  <em>Automated</em>
+                </div>
+                <div className="dash-kpi-item">
+                  <small>Active Outlets</small>
+                  <strong>48 Units</strong>
+                  <em>Zero Latency</em>
+                </div>
+              </div>
+
+              <div className="dash-chart-card">
+                <div className="dash-chart-label">
+                  <span>Real-Time Business Velocity</span>
+                  <small>Updated 2s ago</small>
+                </div>
+                <div className="dash-bars">
+                  <span style={{ height: "35%" }} />
+                  <span style={{ height: "55%" }} />
+                  <span style={{ height: "42%" }} />
+                  <span style={{ height: "78%" }} />
+                  <span style={{ height: "65%" }} />
+                  <span style={{ height: "92%" }} />
+                  <span style={{ height: "80%" }} />
+                  <span style={{ height: "96%" }} />
+                </div>
+              </div>
+
+              <div className="dash-activity-strip">
+                <div className="dash-activity-item">
+                  <span className="activity-dot dot-blue" />
+                  <p>Vedanta: Enterprise workflow pipeline operational</p>
+                </div>
+                <div className="dash-activity-item">
+                  <span className="activity-dot dot-gold" />
+                  <p>Hotel MM Royal: Banquet reservations auto-synced</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Floating High-Impact Cards */}
+          <div className="hero-card hero-card-top">
+            <span className="hero-card-icon"><Sparkles size={15} /></span>
+            <small>AI Assistant</small>
+            <b>Always Active</b>
+          </div>
+
+          <div className="hero-card hero-card-chart">
+            <small>Business Velocity</small>
+            <b>+38.5%</b>
+            <div className="hero-sparkline">
+              <i /><i /><i /><i /><i /><i />
+            </div>
+          </div>
+
+          <div className="hero-card hero-card-bottom">
+            <small>Enterprise Revenue</small>
+            <b>₹12,40,000</b>
+            <span>+18.4% this month</span>
+          </div>
+
+          <div className="hero-note hero-performance-pill">
+            <ShieldCheck size={14} />
+            <span>High-Speed Cloud Architecture</span>
+          </div>
         </div>
       </section>
 
-      <div className="trust-strip"><span className="trust-heading">Trusted by businesses across industries</span>{trusted.map((name) => <span className="trust-logo" key={name}><Gem size={13} />{name}</span>)}</div>
+      <div className="trust-strip">
+        <span className="trust-heading">Trusted by businesses across industries</span>
+        <div className="logo-carousel">
+          <div className="logo-carousel-track">
+            {[...clientLogos, ...clientLogos].map((logo, i) => (
+              <div className="logo-carousel-item" key={`${logo.name}-${i}`}>
+                <Image src={logo.src} alt={logo.name} width={120} height={60} style={{ objectFit: "contain" }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       <WhoWeAre />
 
       <ProductEcosystem />
 
-      <section className="process-section landing-section"><div className="process-copy"><SectionLabel>How It Works</SectionLabel><h2>From Idea to <span>Impact</span></h2><p>A simple, streamlined process to get you from concept to fully functional solution.</p><div className="process-steps">{[["01", "Choose a Plan", "Select the right plan that fits your needs."], ["02", "Chat With Us", "Discuss your business requirements and goals."], ["03", "Share the Data", "Share the data, assets, and details."], ["04", "We Build", "Our team designs and customizes the solution."], ["05", "Launch & Grow", "Go live and start experiencing the power of technology."]].map(([number, title, text]) => <div className="process-step" key={number}><b>{number}</b><div><strong>{title}</strong><p>{text}</p></div></div>)}</div></div><div className="process-art"><div className="process-path" /><div className="process-tile tile-plan"><span>01</span><Gem size={20} /><b>Plan</b></div><div className="process-tile tile-discover"><span>02</span><Network size={20} /><b>Discover</b></div><div className="process-tile tile-build"><span>03</span><Code2 size={20} /><b>Build</b></div><div className="process-tile tile-launch"><span>04</span><Rocket size={20} /><b>Launch</b></div><div className="process-note">Your goals.<br /><i>Our process.</i><br />Real results.</div></div></section>
+      <HowItWorksSection />
 
       <section className="values-section landing-section"><div className="values-heading"><SectionLabel>Built for Business</SectionLabel><h2>Built for <span>Higher</span></h2><p>We combine innovation, simplicity, and real-world experience to deliver technology that makes a difference.</p></div><div className="values-grid">{values.map(({ title, text, icon: Icon, tone }) => <article className={`value-card value-${tone}`} key={title}><div className="value-icon"><Icon size={20} /></div><h3>{title}</h3><p>{text}</p></article>)}</div></section>
 
-
-
-      <section className="pricing-section landing-section"><div className="pricing-heading"><SectionLabel>Pricing</SectionLabel><h2>Flexible Plans for <span>Every Business</span></h2><p>Choose a plan that fits your needs. Upgrade anytime as you grow.</p></div><div className="pricing-grid">{plans.map((plan) => <article className={`pricing-card plan-${plan.tone}`} key={plan.name}>{plan.popular && <div className="popular-pill">Most Popular</div>}{plan.tone === "advanced" && <div className="advanced-badge"><span>✦</span> Built for scale</div>}<div className="pricing-card-icon"><Layers3 size={18} /></div><h3>{plan.name}</h3><p>{plan.text}</p><strong className="plan-price">{plan.price}<small>/month</small></strong><ul>{plan.features.map((feature, featureIndex) => <li key={`${plan.name}-${featureIndex}`}><Check size={13} />{feature}</li>)}</ul><Link href="/contact" className="plan-link">Get Started <ArrowRight size={14} /></Link><div className="plan-orb" /></article>)}</div></section>
-
-      <section className="testimonial-section landing-section"><div className="testimonial-image"><Image src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Tekkzy customer success" fill sizes="(max-width: 780px) 94vw, 38vw" style={{ objectFit: "cover", objectPosition: "52% 50%" }} /><div className="testimonial-company"><b>The Crest</b><span>Customer since 2023</span></div></div><div className="testimonial-copy"><SectionLabel>Customer Stories</SectionLabel><h2>Real Businesses.<br /><span>Real Progress.</span></h2><p>See how organizations are using Tekkzy to solve real problems and grow faster.</p><div className="quote-mark">“</div><blockquote>Tekkzy has streamlined our operations and given us better visibility across all departments. Our team is more productive and our guests are happier than ever.</blockquote><strong>Operations Manager</strong><small>The Crest Hospitality Group</small></div></section>
+      <PricingSection />
 
       <section className="technology-section landing-section"><div className="technology-image"><div className="tech-board"><div className="tech-board-nav"><span /><span /><span /></div><div className="tech-board-content"><div className="tech-board-title">Team intelligence</div><div className="tech-board-bars"><i /><i /><i /><i /></div><div className="tech-board-users"><b /><b /><b /><b /><b /></div></div></div><div className="tech-float tech-float-one"><Sparkles size={14} /> AI Assistant</div><div className="tech-float tech-float-two"><Users size={14} /> Insights</div></div><div className="technology-copy"><SectionLabel>Technology Works Best With People</SectionLabel><h2>Technology Works<br /><span>Best with People</span></h2><p>We believe in a future where creativity and AI work together. Technology empowers your team — it doesn’t replace them.</p><div className="tech-bullets"><span><Users size={16} /> Empower Teams</span><span><ShieldCheck size={16} /> Work Smarter</span><span><Heart size={16} /> Achieve More</span></div></div></section>
 
-      <section className="principles-section landing-section"><div className="principles-heading"><SectionLabel>Our Values</SectionLabel><h2>Principles That<br /><span>Guide Us</span></h2><p>These values shape how we build, work, and help our customers succeed.</p></div><div className="principles-grid">{[["01", "Customer Focus", "Your success is our priority.", "blue"], ["02", "Innovation", "We embrace what’s next.", "violet"], ["03", "Simplicity", "Powerful technology, made simple.", "green"], ["04", "Trust", "Built for the long term.", "orange"]].map(([number, title, text, tone]) => <article className={`principle-card principle-${tone}`} key={number}><b>{number}</b><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+      <PrinciplesSection />
 
-      <section className="landing-cta"><div><SectionLabel>Ready to Build</SectionLabel><h2>Ready to transform<br /><span>your business?</span></h2><p>Join hundreds of businesses using Tekkzy to work smarter, move faster, and achieve more.</p><Link className="landing-primary" href="/contact">Start a Project <ArrowRight size={15} /></Link></div><div className="cta-city"><i /><i /><i /><i /><i /><i /><i /><span>Smarter<br />businesses.<br /><em>Brighter futures.</em></span></div></section>
+      <TestimonialsSection />
+
+      <FaqSection />
     </div></LandingMotion>
   );
 }

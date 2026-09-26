@@ -23,9 +23,12 @@ export default function DigitalMarketingSection() {
         <motion.div className="dm-header" initial="hidden" whileInView="visible" viewport={{ once: false }} variants={fadeUp}>
           <h2>Supercharge Growth with<br />Tekkzy <span className="dm-highlight">Digital Marketing</span></h2>
           <p>Data-driven strategies that connect your brand with the right audience<br />and drive real, measurable results.</p>
-          <Link href="/product/digital-marketing" className="button dm-learn-more-btn" style={{ marginTop: '20px', background: 'linear-gradient(135deg, #2ba88e, #1ba77e)', borderColor: '#1ba77e' }}>
-            Learn More <ArrowRight size={16} />
-          </Link>
+          <div className="dm-cta">
+            <Link href="/product/digital-marketing" className="dm-learn-more-btn">
+              Explore Digital Marketing <ArrowRight size={17} />
+            </Link>
+            <span>Strategy, creative and performance—working as one.</span>
+          </div>
         </motion.div>
 
         <div className="dm-core-layout">

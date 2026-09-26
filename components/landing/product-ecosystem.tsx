@@ -21,6 +21,7 @@ import {
   Filter,
   Globe,
   Layers,
+  Lock,
   Megaphone,
   MessageSquare,
   Package,
@@ -36,15 +37,15 @@ import {
 } from "lucide-react";
 
 const products = [
-  { name: "ERP", icon: BriefcaseBusiness, accent: "#1762ef" },
-  { name: "CRM", icon: Users, accent: "#3f60ea" },
-  { name: "HR Suite", icon: Users, accent: "#e05690" },
-  { name: "Inventory", icon: Package, accent: "#d97b1e" },
-  { name: "Analytics", icon: BarChart3, accent: "#4565cf" },
-  { name: "AI Assistant", icon: Bot, accent: "#7157ee" },
-  { name: "Automation", icon: Workflow, accent: "#20a68c" },
-  { name: "Digital Marketing", icon: Megaphone, accent: "#2ba88e" },
-  { name: "SEO", icon: Search, accent: "#7d5ce7" },
+  { name: "ERP", icon: BriefcaseBusiness, accent: "#1762ef", category: "Core Operations", badge: "Command Center" },
+  { name: "CRM", icon: Users, accent: "#3f60ea", category: "Revenue & Deals", badge: "Pipeline" },
+  { name: "HR Suite", icon: Users, accent: "#e05690", category: "People & Staff", badge: "Workforce" },
+  { name: "Inventory", icon: Package, accent: "#d97b1e", category: "Warehouse & Stock", badge: "Multi-Bay" },
+  { name: "Analytics", icon: BarChart3, accent: "#4565cf", category: "Executive BI", badge: "Metrics" },
+  { name: "AI Assistant", icon: Bot, accent: "#7157ee", category: "Autonomous Copilot", badge: "GenAI" },
+  { name: "Automation", icon: Workflow, accent: "#20a68c", category: "Event Pipelines", badge: "Zero-Code" },
+  { name: "Digital Marketing", icon: Megaphone, accent: "#2ba88e", category: "Growth & Campaigns", badge: "Ad ROI" },
+  { name: "SEO", icon: Search, accent: "#7d5ce7", category: "Search Dominance", badge: "Rank #1" },
 ];
 
 /* ────────────────────────────────────────────── */
@@ -707,7 +708,11 @@ function MarketingVisual() {
       <div className="pv-mkt-funnel-sec">
         <div className="pv-mkt-funnel-head">
           <span>Full Conversion Funnel</span>
-          <small>2.4M Impressions ➔ 2,840 Paying Customers</small>
+          <small className="pv-mkt-funnel-summary">
+            <span>2.4M Impressions</span>
+            <ArrowRight size={11} aria-hidden="true" />
+            <span>2,840 Paying Customers</span>
+          </small>
         </div>
         <div className="pv-mkt-funnel-steps">
           {[
@@ -849,10 +854,10 @@ export default function ProductEcosystem() {
   const Visual = visualMap[activeProduct.name];
 
   return (
-    <section className="platform-section landing-section" id="product-ecosystem">
+    <section className="platform-section section-shell" id="product-ecosystem">
       <div className="platform-intro">
         <div className="landing-label"><span /> Our Product Ecosystem</div>
-        <h2>Everything You Need<br />to <span>Run and Grow</span><br />Your Business</h2>
+        <h2>Everything You Need to <span>Run and Grow</span> Your Business</h2>
         <p>A complete suite of business tools, designed to work better together.</p>
         <div className="product-list" role="tablist" aria-label="Tekkzy products">
           {products.map((product) => {
@@ -863,21 +868,64 @@ export default function ProductEcosystem() {
                 type="button"
                 role="tab"
                 aria-selected={isActive}
-                className={isActive ? "selected" : ""}
+                className={`product-tab-btn ${isActive ? "selected" : ""}`}
                 key={product.name}
                 onClick={() => setActiveProduct(product)}
                 style={{ "--ecosystem-accent": product.accent } as React.CSSProperties}
               >
-                <span><Icon size={13} style={{ color: product.accent }} />{product.name}</span>
-                <ChevronRight size={14} />
+                <div className="product-tab-left">
+                  <div className="product-tab-icon-box" style={{ background: `${product.accent}14`, color: product.accent }}>
+                    <Icon size={14} />
+                  </div>
+                  <div className="product-tab-text">
+                    <span className="product-tab-title">{product.name}</span>
+                    <span className="product-tab-cat">{product.category}</span>
+                  </div>
+                </div>
+                <div className="product-tab-right">
+                  <span className="product-tab-badge">{product.badge}</span>
+                  <ChevronRight size={13} className="product-tab-arrow" />
+                </div>
               </button>
             );
           })}
         </div>
       </div>
       <div className="platform-visual pv-visual-wrap" style={{ "--ecosystem-accent": activeProduct.accent } as React.CSSProperties}>
+        {/* MacOS Chrome Top Bar */}
+        <div className="pv-chrome-bar">
+          <div className="pv-chrome-dots">
+            <span className="pv-chrome-dot red" />
+            <span className="pv-chrome-dot yellow" />
+            <span className="pv-chrome-dot green" />
+          </div>
+          <div className="pv-chrome-url">
+            <Lock size={11} className="pv-chrome-lock" />
+            <span>tekkzy.cloud/app/{activeProduct.name.toLowerCase().replace(/\s+/g, "-")}</span>
+          </div>
+          <div className="pv-chrome-status">
+            <span className="pv-live-dot" />
+            <span>Live Sync Active</span>
+          </div>
+        </div>
+
         <div ref={visualRef} className="pv-shell" key={activeProduct.name}>
           {Visual && <Visual />}
+        </div>
+
+        {/* Dashboard Status Bar Footer */}
+        <div className="pv-chrome-footer">
+          <div className="pv-chrome-footer-left">
+            <span className="pv-footer-node-indicator" />
+            <span>Cluster: <b>us-east-prod-01</b></span>
+            <span className="pv-footer-sep">·</span>
+            <span>Latency: <b>14ms</b></span>
+            <span className="pv-footer-sep">·</span>
+            <span>Encryption: <b>AES-256</b></span>
+          </div>
+          <div className="pv-chrome-footer-right">
+            <span className="pv-footer-health">100% Operational</span>
+          </div>
         </div>
       </div>
     </section>

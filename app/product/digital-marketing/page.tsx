@@ -46,11 +46,16 @@ const channels = [
 
 const services = [
   { icon: Search, title: "Search Engine Optimization", desc: "Technical audits, keyword strategy, content optimization, link building, and local SEO. We drive qualified organic traffic that converts.", color: "#f59e0b", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" },
+  { icon: Globe2, title: "Google Business Profile", desc: "Local listing optimization, review strategy, map visibility, location pages, and monthly insights to turn nearby searches into enquiries.", color: "#2f8aef", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&q=80" },
   { icon: Target, title: "Paid Advertising (PPC)", desc: "Google Ads, Meta Ads, LinkedIn Ads — expertly managed campaigns with A/B testing, audience targeting, and conversion tracking for maximum ROAS.", color: "#1760ed", image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&q=80" },
   { icon: Share2, title: "Social Media Marketing", desc: "Strategy, content creation, community management, and paid social campaigns across Instagram, LinkedIn, Twitter, and emerging platforms.", color: "#e54d75", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&q=80" },
   { icon: PenTool, title: "Content Marketing", desc: "Blog strategy, long-form content, whitepapers, case studies, infographics, and video scripts — built around your target keywords and buyer journey.", color: "#896dff", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80" },
   { icon: Mail, title: "Email & Marketing Automation", desc: "Drip campaigns, newsletter design, segmentation, personalization, A/B testing, and automated workflows that nurture leads through your funnel.", color: "#1ba77e", image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=500&q=80" },
+  { icon: PlaySquare, title: "Cinematic Video Marketing", desc: "Brand films, product videos, social reels, YouTube strategy, motion graphics, and high-retention edits built to earn attention.", color: "#d75062", image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=500&q=80" },
   { icon: Globe2, title: "Conversion Rate Optimization", desc: "Landing page optimization, A/B testing, heat map analysis, user journey mapping, and data-driven UX improvements that turn visitors into customers.", color: "#e95812", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" },
+  { icon: Users, title: "Influencer & Creator Marketing", desc: "Creator discovery, outreach, campaign management, content approvals, and performance reporting that keeps your brand authentic.", color: "#7157ee", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&q=80" },
+  { icon: Star, title: "Reputation & PR Marketing", desc: "Review generation, reputation monitoring, thought leadership, digital PR, and credibility-building campaigns for brands that lead.", color: "#d99c0b", image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&q=80" },
+  { icon: TrendingUp, title: "Affiliate & Performance Marketing", desc: "Partner programs, attribution, commission strategy, conversion tracking, and scalable acquisition built around profitable growth.", color: "#2ba88e", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=80" },
 ];
 
 const stats = [
@@ -62,38 +67,101 @@ const stats = [
 
 const clients = [
   {
-    name: "Rajesh Sharma",
-    role: "CMO, TechCorp",
-    image: "https://i.pravatar.cc/150?u=rajesh-dm",
-    quote: "Tekkzy's digital marketing team transformed our online presence. Our organic traffic grew 420% in 8 months, and our cost per lead dropped by 58%.",
-    result: "420% organic traffic growth",
+    name: "Tech Mart",
+    role: "Retail & Technology",
+    mark: "TM",
+    quote: "Tekkzy gave our campaigns a clear direction. Our offers now reach the right shoppers at the right time, and every update is easy to understand.",
+    result: "Sharper local visibility",
     stars: 5,
   },
   {
-    name: "Priya Mehta",
-    role: "VP Marketing, NextGen",
-    image: "https://i.pravatar.cc/150?u=priya-dm",
-    quote: "The PPC campaigns Tekkzy runs for us consistently deliver 5.2x ROAS. Their data-driven approach and weekly optimization calls set them apart.",
-    result: "5.2x return on ad spend",
+    name: "Balaji Cafe",
+    role: "Food & Hospitality",
+    mark: "BC",
+    quote: "The team captured what makes Balaji Cafe special and turned it into content people genuinely engage with. Our local presence feels more alive than ever.",
+    result: "Stronger discovery",
+    stars: 4.5,
+  },
+  {
+    name: "Look Salon",
+    role: "Beauty & Wellness",
+    mark: "LS",
+    quote: "From campaign ideas to polished visuals, the work has been thoughtful and on-brand. Booking enquiries are now part of our everyday conversation.",
+    result: "3.2x Booking enquiries",
+    stars: 4,
+  },
+  {
+    name: "Manas",
+    role: "Lifestyle Brand",
+    mark: "MN",
+    quote: "Tekkzy brought structure to our digital presence without losing our personality. The strategy feels considered, creative, and easy for our team to run with.",
+    result: "Clearer brand story",
+    stars: 4.5,
+  },
+  {
+    name: "Travel Style",
+    role: "Travel & Experiences",
+    mark: "TS",
+    quote: "They understand how to make an experience feel irresistible before someone has even packed a bag. The content and targeting work beautifully together.",
+    result: "+240% qualified leads",
     stars: 5,
   },
   {
-    name: "David Chen",
-    role: "Head of Growth, Synergy",
-    image: "https://i.pravatar.cc/150?u=david-dm",
-    quote: "From SEO to social media to email — Tekkzy handles our entire digital strategy. Best agency decision we've ever made.",
-    result: "3x qualified leads in 6 months",
+    name: "Fragrance House",
+    role: "Luxury Retail",
+    mark: "FH",
+    quote: "The creative feels premium, while the reporting stays practical. We always know what is working and where the next opportunity is.",
+    result: "Premium digital reach",
+    stars: 4.5,
+  },
+  {
+    name: "Foot Lounge",
+    role: "Footwear & Fashion",
+    mark: "FL",
+    quote: "Our launches now have momentum from day one. Tekkzy combines fresh ideas with the detail needed to make every campaign feel connected.",
+    result: "Launch day sellout",
+    stars: 4,
+  },
+  {
+    name: "Jawed Habib",
+    role: "Salon & Beauty",
+    mark: "JH",
+    quote: "The digital strategy is focused, fast-moving, and aligned with the way our customers discover salon services today. It has made our marketing feel effortless.",
+    result: "Consistent discovery",
     stars: 5,
   },
   {
-    name: "Sneha Iyer",
-    role: "Founder, Velocity",
-    image: "https://i.pravatar.cc/150?u=sneha-dm",
-    quote: "They don't just run campaigns — they understand our business deeply. The content strategy they built drives 60% of our new business pipeline.",
-    result: "60% of pipeline from content",
-    stars: 5,
+    name: "Fashion Planet",
+    role: "Fashion Retail",
+    mark: "FP",
+    quote: "Tekkzy helped us turn seasonal collections into compelling stories across every channel. The results feel cohesive, energetic, and right for our audience.",
+    result: "+180% seasonal ROAS",
+    stars: 4.5,
   },
 ];
+
+function StarRating({ stars }: { stars: number }) {
+  return (
+    <div className="testimonial-stars-wrap">
+      <div className="testimonial-stars" aria-label={`${stars} out of 5 stars`}>
+        {[0, 1, 2, 3, 4].map((idx) => {
+          const fillPercentage = Math.max(0, Math.min(100, (stars - idx) * 100));
+          return (
+            <span key={idx} className="star-cell">
+              <Star size={14} className="star-outline" strokeWidth={1.5} />
+              {fillPercentage > 0 && (
+                <span className="star-fill-clip" style={{ width: `${fillPercentage}%` }}>
+                  <Star size={14} className="star-solid" strokeWidth={1.5} />
+                </span>
+              )}
+            </span>
+          );
+        })}
+      </div>
+      <span className="testimonial-rating-num">{stars.toFixed(1)}</span>
+    </div>
+  );
+}
 
 const process = [
   { step: "01", title: "Discovery & Audit", desc: "Deep dive into your business, competitors, audience, and current digital presence to identify opportunities.", icon: Search },
@@ -123,31 +191,54 @@ export default function DigitalMarketingPage() {
           <div className="dm-hero-overlay" />
         </div>
         <div className="dm-hero-content section-shell">
-          <motion.span className="pill" style={{ background: "rgba(255,255,255,.12)", color: "#4aedc4", borderColor: "rgba(74,237,196,.3)" }} {...fade()}>
-            <Megaphone size={14} /> TEKKZY DIGITAL MARKETING
-          </motion.span>
-          <motion.h1 {...fade(0.08)}>
-            Campaigns That<br />
-            <span>Actually Convert.</span>
-          </motion.h1>
-          <motion.p {...fade(0.14)}>
-            From strategy to execution to measurement — Tekkzy Digital Marketing combines data, creativity, and AI to drive growth across every digital channel.
-          </motion.p>
-          <motion.div className="dm-hero-actions" {...fade(0.2)}>
-            <Link href="/#contact" className="button" style={{ background: "#2ba88e", borderColor: "#2ba88e" }}>
-              Get Marketing Plan <ArrowRight size={16} />
-            </Link>
-            <Link href="#services" className="button button-outline" style={{ color: "#fff", borderColor: "rgba(255,255,255,.3)" }}>
-              Our Services <ChevronRight size={16} />
-            </Link>
-          </motion.div>
-          {/* Channel pills */}
-          <motion.div className="dm-channel-pills" {...fade(0.28)}>
-            {channels.map((ch) => (
-              <span key={ch.name} className="dm-channel-pill">
-                <ch.icon size={15} style={{ color: ch.color }} /> {ch.name}
-              </span>
-            ))}
+          <div className="dm-hero-copy">
+            <motion.span className="dm-hero-eyebrow" {...fade()}>
+              <Megaphone size={14} /> DIGITAL MARKETING FOR AMBITIOUS TEAMS
+            </motion.span>
+            <motion.h1 {...fade(0.08)}>
+              Turn Clicks Into<br />
+              <span>Customers.</span>
+            </motion.h1>
+            <motion.p {...fade(0.14)}>
+              We create digital marketing strategies that help your brand get noticed, generate leads, and turn attention into measurable growth.
+            </motion.p>
+            <motion.div className="dm-hero-actions" {...fade(0.2)}>
+              <Link href="/#contact" className="dm-primary-button">
+                Get a Free Strategy Call <ArrowRight size={16} />
+              </Link>
+              <Link href="#services" className="dm-secondary-button">
+                See Our Services <ChevronRight size={16} />
+              </Link>
+            </motion.div>
+            <motion.div className="dm-channel-pills" {...fade(0.28)}>
+              {channels.slice(0, 4).map((ch) => (
+                <span key={ch.name} className="dm-channel-pill">
+                  <ch.icon size={14} style={{ color: ch.color }} /> {ch.name}
+                </span>
+              ))}
+            </motion.div>
+          </div>
+          <motion.div className="dm-hero-visual" {...fade(0.18)}>
+            <div className="dm-orbit-diagram" aria-label="Digital marketing channels">
+              <span className="dm-orbit-line line-top" aria-hidden="true" />
+              <span className="dm-orbit-line line-top-right" aria-hidden="true" />
+              <span className="dm-orbit-line line-right" aria-hidden="true" />
+              <span className="dm-orbit-line line-bottom-right" aria-hidden="true" />
+              <span className="dm-orbit-line line-bottom" aria-hidden="true" />
+              <span className="dm-orbit-line line-bottom-left" aria-hidden="true" />
+              <span className="dm-orbit-line line-left" aria-hidden="true" />
+              <span className="dm-orbit-line line-top-left" aria-hidden="true" />
+
+              <div className="dm-orbit-center"><strong>Digital</strong><span>Marketing</span></div>
+              <MarketingNode className="node-web" icon={Globe2} label={"Website\nMarketing"} />
+              <MarketingNode className="node-seo" icon={Search} label="SEO" />
+              <MarketingNode className="node-social" icon={Share2} label={"Social Media\nMarketing"} />
+              <MarketingNode className="node-ppc" icon={Target} label="PPC Marketing" />
+              <MarketingNode className="node-content" icon={PenTool} label={"Content\nMarketing"} />
+              <MarketingNode className="node-email" icon={Mail} label={"Email\nMarketing"} />
+              <MarketingNode className="node-affiliate" icon={Users} label={"Affiliate\nMarketing"} />
+              <MarketingNode className="node-video" icon={PlaySquare} label={"Video\nMarketing"} />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -167,15 +258,18 @@ export default function DigitalMarketingPage() {
       </section>
 
       {/* ── Services with Images ── */}
-      <section id="services" className="dm-services-section section-shell">
-        <motion.div className="dm-section-header" {...fade()}>
-          <span className="eyebrow">OUR SERVICES</span>
-          <h2>Full-stack digital marketing.</h2>
-          <p>Every channel, every touchpoint, one unified strategy built around your growth.</p>
-        </motion.div>
-        <div className="dm-services-grid-full">
+      <section id="services" className="dm-services-section" data-horizontal-section>
+        <div className="dm-services-sticky-inner section-shell">
+          <motion.div className="dm-section-header dm-services-heading" {...fade()}>
+            <span className="eyebrow">OUR SERVICES</span>
+            <h2>Full-stack digital marketing.</h2>
+            <p>Every channel, every touchpoint, one unified strategy built around your growth.</p>
+            <div className="dm-scroll-cue"><span>Scroll to explore</span><i><b /></i></div>
+          </motion.div>
+          <div className="dm-services-rail-viewport">
+            <div className="dm-services-grid-full" data-horizontal-track>
           {services.map((s, i) => (
-            <motion.div key={s.title} className="dm-service-card-full" {...fade(i * 0.06)}>
+            <motion.div key={s.title} className="dm-service-card-full product-card" {...fade(i * 0.06)}>
               <div className="dm-service-img">
                 <Image src={s.image} alt={s.title} fill sizes="(max-width: 768px) 100vw, 400px" style={{ objectFit: "cover" }} />
                 <div className="dm-service-img-overlay" />
@@ -192,6 +286,8 @@ export default function DigitalMarketingPage() {
               </div>
             </motion.div>
           ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -219,33 +315,43 @@ export default function DigitalMarketingPage() {
       </section>
 
       {/* ── Client Testimonials ── */}
-      <section className="dm-clients-section section-shell">
-        <motion.div className="dm-section-header" {...fade()}>
-          <span className="eyebrow">CLIENT SUCCESS STORIES</span>
-          <h2>Trusted by ambitious brands.</h2>
-          <p>Real results from real businesses that partnered with Tekkzy Digital Marketing.</p>
-        </motion.div>
-        <div className="dm-clients-grid">
-          {clients.map((c, i) => (
-            <motion.div key={c.name} className="dm-client-card" {...fade(i * 0.08)}>
-              <div className="dm-client-stars">
-                {Array.from({ length: c.stars }).map((_, si) => (
-                  <Star key={si} size={14} fill="#f59e0b" color="#f59e0b" />
+      <section className="dm-clients-section">
+        <div className="section-shell">
+          <motion.div className="dm-section-header dm-testimonials-heading" {...fade()}>
+            <span className="eyebrow">CLIENT SUCCESS STORIES</span>
+            <h2>Trusted by brands people love.</h2>
+            <p>Thoughtful digital marketing for teams across retail, hospitality, beauty, fashion, and travel.</p>
+            <div className="testimonial-summary-pill" style={{ margin: "20px auto 0" }}>
+              <div className="summary-stars">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} size={14} className="star-solid" />
                 ))}
               </div>
-              <p className="dm-client-quote">&ldquo;{c.quote}&rdquo;</p>
-              <div className="dm-client-result">
-                <CheckCircle2 size={14} /> {c.result}
-              </div>
-              <div className="dm-client-author">
-                <img src={c.image} alt={c.name} className="dm-client-avatar" />
-                <div>
-                  <strong>{c.name}</strong>
-                  <small>{c.role}</small>
+              <span className="summary-text"><strong>4.9 / 5.0</strong> rating from 50+ growing brands</span>
+            </div>
+          </motion.div>
+        </div>
+        <div className="dm-clients-carousel-wrap">
+          <div className="dm-clients-carousel-track">
+            {[...clients, ...clients].map((c, i) => (
+              <div key={`${c.name}-${i}`} className="dm-client-card">
+                <div className="dm-client-card-top">
+                  <StarRating stars={c.stars} />
+                  <div className="dm-client-result">
+                    <CheckCircle2 size={13} /> {c.result}
+                  </div>
+                </div>
+                <p className="dm-client-quote">&ldquo;{c.quote}&rdquo;</p>
+                <div className="dm-client-author">
+                  <span className="dm-client-mark" aria-hidden="true">{c.mark}</span>
+                  <div>
+                    <strong>{c.name}</strong>
+                    <small>{c.role}</small>
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -292,5 +398,14 @@ export default function DigitalMarketingPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+function MarketingNode({ icon: Icon, label, className }: { icon: typeof Globe2; label: string; className: string }) {
+  return (
+    <div className={`dm-orbit-node ${className}`}>
+      <span className="dm-orbit-icon"><Icon size={25} /></span>
+      <span className="dm-orbit-label">{label.split("\n").map((part) => <span key={part}>{part}</span>)}</span>
+    </div>
   );
 }

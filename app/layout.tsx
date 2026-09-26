@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { AppShell } from "@/components/app-shell";
 import { Footer } from "@/components/footer";
+import TekkBotFab from "@/components/tekkbot-fab";
 import "@fontsource-variable/manrope/wght.css";
 import "@fontsource-variable/space-grotesk/wght.css";
 import "./globals.css";
@@ -25,10 +26,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <SmoothScroll>
           <AppShell>
-            <main style={{ minHeight: 'calc(100vh - 82px - 200px)' }}>
+            <main className="site-page" style={{ minHeight: 'calc(100vh - 82px - 200px)' }}>
               {children}
             </main>
             <Footer />
+            <TekkBotFab />
           </AppShell>
         </SmoothScroll>
       </body>
