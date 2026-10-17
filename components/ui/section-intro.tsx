@@ -5,7 +5,7 @@ export function SectionIntro({
   title,
   copy,
   link,
-  href = "#contact",
+  href = "/contact",
 }: {
   eyebrow: string;
   title: React.ReactNode;

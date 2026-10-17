@@ -19,7 +19,7 @@ export default function CloudInfrastructurePage() {
           We architect, deploy, and manage enterprise-grade cloud infrastructure on AWS, Google Cloud, and Azure. Stop worrying about server maintenance and start focusing on your product.
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", justifyContent: "center" }}>
-          <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+          <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
             Get a Free Architecture Audit <ArrowRight size={16} />
           </Link>
         </motion.div>
@@ -110,7 +110,7 @@ export default function CloudInfrastructurePage() {
       <section className="solution-cta">
         <h2>Future-proof your infrastructure.</h2>
         <p>Let's build a secure, scalable, and cost-effective foundation for your applications.</p>
-        <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+        <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
           Schedule a Consultation <ArrowRight size={16} />
         </Link>
       </section>

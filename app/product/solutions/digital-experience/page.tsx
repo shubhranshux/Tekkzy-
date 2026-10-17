@@ -22,10 +22,10 @@ export default function DigitalExperiencePage() {
             In today's hyper-connected world, your digital touchpoints are the first and most important interactions customers have with your brand. We engineer high-performance interfaces that don't just look beautiful — they drive measurable business outcomes.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+            <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
               Start a Project <ArrowRight size={16} />
             </Link>
-            <Link href="/#contact" className="button button-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+            <Link href="/contact" className="button button-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
               View Case Studies
             </Link>
           </motion.div>
@@ -176,7 +176,7 @@ export default function DigitalExperiencePage() {
       <section className="solution-cta">
         <h2>Ready to transform your digital presence?</h2>
         <p>Let's build a world-class experience your customers will love and your competitors will envy.</p>
-        <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+        <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
           Start Your Project <ArrowRight size={16} />
         </Link>
       </section>

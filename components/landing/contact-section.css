@@ -1,0 +1,331 @@
+/* ── Landing Page Contact Section ── */
+.landing-contact-section {
+  position: relative;
+  overflow: hidden;
+  padding: 84px 24px 96px;
+  background: radial-gradient(circle at 50% 10%, rgba(23, 96, 237, 0.07) 0%, rgba(11, 23, 52, 0) 60%), #f8fafc;
+}
+
+.dark .landing-contact-section {
+  background: radial-gradient(circle at 50% 10%, rgba(23, 96, 237, 0.15) 0%, rgba(6, 12, 28, 0) 65%), #060c1c;
+}
+
+.landing-contact-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.landing-contact-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+
+.landing-contact-header h2 {
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 850;
+  line-height: 1.2;
+  margin: 12px 0 14px;
+  color: #0b1734;
+  letter-spacing: -0.02em;
+}
+
+.dark .landing-contact-header h2 {
+  color: #ffffff;
+}
+
+.landing-contact-header h2 span {
+  background: linear-gradient(135deg, #1760ed 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-contact-header p {
+  color: #64748b;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
+.dark .landing-contact-header p {
+  color: #94a3b8;
+}
+
+.landing-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .landing-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.landing-contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.landing-contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dark .landing-contact-card {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.landing-contact-card:hover {
+  transform: translateY(-2px);
+  border-color: #bfdbfe;
+  box-shadow: 0 10px 25px rgba(23, 96, 237, 0.08);
+}
+
+.dark .landing-contact-card:hover {
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+.landing-contact-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.phone-icon { background: #ecfdf5; color: #10b981; }
+.mail-icon { background: #eff6ff; color: #1760ed; }
+.location-icon { background: #f5f3ff; color: #7c3aed; }
+
+.landing-contact-card-content {
+  flex: 1;
+}
+
+.landing-contact-card-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.dark .landing-contact-card-label {
+  color: #94a3b8;
+}
+
+.landing-plus-badge {
+  background: #eff6ff;
+  color: #1760ed;
+  font-size: 10.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.dark .landing-plus-badge {
+  background: rgba(23, 96, 237, 0.2);
+  color: #60a5fa;
+}
+
+.landing-contact-card-content h4 {
+  font-size: 16.5px;
+  font-weight: 750;
+  margin: 0 0 4px;
+  color: #0b1734;
+}
+
+.dark .landing-contact-card-content h4 {
+  color: #ffffff;
+}
+
+.landing-contact-card-content p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 12px;
+  line-height: 1.45;
+}
+
+.dark .landing-contact-card-content p {
+  color: #94a3b8;
+}
+
+.landing-contact-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.landing-contact-sub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 650;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #1e293b;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.dark .landing-contact-sub-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.landing-contact-sub-btn:hover {
+  background: #1760ed;
+  color: #ffffff;
+  border-color: #1760ed;
+}
+
+.landing-contact-sub-btn.whatsapp-btn:hover {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+.landing-contact-map-col {
+  height: 100%;
+}
+
+.landing-map-frame {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.dark .landing-map-frame {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.landing-map-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.dark .landing-map-bar {
+  background: rgba(15, 23, 42, 0.8);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.landing-map-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0b1734;
+}
+
+.dark .landing-map-title {
+  color: #ffffff;
+}
+
+.landing-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #1760ed;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.landing-map-link:hover {
+  text-decoration: underline;
+}
+
+.landing-map-embed {
+  flex: 1;
+  min-height: 250px;
+  background: #e2e8f0;
+}
+
+.landing-map-embed iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  border: 0;
+  display: block;
+}
+
+.landing-map-bottom-cta {
+  padding: 16px 20px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dark .landing-map-bottom-cta {
+  background: rgba(15, 23, 42, 0.9);
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.landing-map-hours {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.dark .landing-map-hours {
+  color: #94a3b8;
+}
+
+.landing-contact-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #1760ed;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(23, 96, 237, 0.25);
+}
+
+.landing-contact-primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}

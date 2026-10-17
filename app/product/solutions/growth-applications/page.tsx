@@ -19,7 +19,7 @@ export default function GrowthApplicationsPage() {
           True business growth requires more than great ideas — it requires the right technology and strategy working in perfect harmony. We build bespoke software and deploy data-driven marketing engines designed to aggressively capture market share.
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", justifyContent: "center", marginTop: "8px" }}>
-          <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+          <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
             Talk to a Growth Expert <ArrowRight size={16} />
           </Link>
         </motion.div>
@@ -139,7 +139,7 @@ export default function GrowthApplicationsPage() {
       <section className="solution-cta">
         <h2>Ready to accelerate your growth?</h2>
         <p>Partner with us to build the applications and campaigns that scale your revenue.</p>
-        <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+        <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
           Get Your Growth Plan <ArrowRight size={16} />
         </Link>
       </section>

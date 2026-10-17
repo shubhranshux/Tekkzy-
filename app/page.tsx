@@ -4,7 +4,6 @@ import {
   ArrowRight,
   BarChart3,
   Check,
-  ChevronRight,
   CircleCheck,
   Cloud,
   Cpu,
@@ -31,6 +30,7 @@ import TestimonialsSection from "@/components/landing/testimonials-section";
 import PrinciplesSection from "@/components/landing/principles-section";
 import PricingSection from "@/components/landing/pricing-section";
 import FaqSection from "@/components/landing/faq-section";
+import ContactSection from "@/components/landing/contact-section";
 
 const products = ["ERP", "CRM", "HR Suite", "Inventory", "Analytics", "AI Assistant", "Automation", "Digital Marketing", "SEO"];
 const clientLogos = [
@@ -72,12 +72,6 @@ export default function HomePage() {
     <LandingMotion><div className="landing-page" id="top">
       <section className="landing-hero">
         <div className="landing-hero-copy">
-          <div className="hero-badge-pill">
-            <span className="hero-badge-glow" />
-            <Sparkles size={13} className="hero-badge-icon" />
-            <span>Intelligent Enterprise Cloud Suite</span>
-            <ChevronRight size={13} className="hero-badge-arrow" />
-          </div>
           <h1>Smart Technology<br />for a <span>Stronger<br />Tomorrow</span></h1>
           <p>Empower your business with intelligent, connected, and scalable technology. From ERP &amp; POS to AI automation and real-time analytics, Tekkzy simplifies complexity to accelerate growth.</p>
           <div className="landing-actions">
@@ -264,6 +258,8 @@ export default function HomePage() {
       <TestimonialsSection />
 
       <FaqSection />
+
+      <ContactSection />
     </div></LandingMotion>
   );
 }

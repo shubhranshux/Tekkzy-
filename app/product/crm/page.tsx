@@ -35,7 +35,7 @@ export default function CrmPage() {
             Tekkzy CRM gives your sales, marketing, and support teams a unified view of every customer — from first touch to loyal advocate. Powered by AI, designed for growth.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>Start Free Trial <ArrowRight size={16} /></Link>
+            <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>Start Free Trial <ArrowRight size={16} /></Link>
             <Link href="/product/solutions/core-business" className="button button-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>See How It Works</Link>
           </motion.div>
         </div>
@@ -98,7 +98,7 @@ export default function CrmPage() {
       <section className="cta-section section-shell">
         <div><h2>Start building better relationships today.</h2><p>Join 200+ businesses using Tekkzy CRM to close more deals and grow faster.</p></div>
         <div className="cta-actions">
-          <Link className="button" href="/#contact">Start Free Trial <ArrowRight size={16} /></Link>
+          <Link className="button" href="/contact">Start Free Trial <ArrowRight size={16} /></Link>
           <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>

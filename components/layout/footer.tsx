@@ -13,6 +13,7 @@ import {
   Globe,
 } from "lucide-react";
 import { useState } from "react";
+import { CONTACT_DETAILS } from "@/lib/constants";
 
 const footerLinks = {
   PRODUCTS: [
@@ -100,9 +101,20 @@ export function Footer() {
           </div>
 
           <div className="footer-contact-row">
-            <span><Mail size={14} /> hello@tekkzy.com</span>
-            <span><Phone size={14} /> +91 98765 43210</span>
-            <span><MapPin size={14} /> India</span>
+            <a href={`mailto:${CONTACT_DETAILS.email}`}>
+              <Mail size={14} /> {CONTACT_DETAILS.email}
+            </a>
+            <a href={`tel:${CONTACT_DETAILS.phoneRaw}`}>
+              <Phone size={14} /> {CONTACT_DETAILS.phone}
+            </a>
+            <a
+              href={CONTACT_DETAILS.mapsDirectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Open Google Maps Location"
+            >
+              <MapPin size={14} /> {CONTACT_DETAILS.fullAddress}
+            </a>
           </div>
         </div>
 

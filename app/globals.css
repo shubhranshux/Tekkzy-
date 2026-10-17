@@ -5995,6 +5995,7 @@ html[data-theme="dark"] .pv { color: #c7d4e8; }.platform-visual .pv-title, html[
   gap: 9px;
   margin-top: 12px;
 }
+.footer-contact-row a,
 .footer-contact-row span {
   display: flex;
   align-items: center;
@@ -6002,6 +6003,9 @@ html[data-theme="dark"] .pv { color: #c7d4e8; }.platform-visual .pv-title, html[
   color: #334155;
   font-size: 13px;
   font-weight: 500;
+}
+.footer-contact-row a:hover {
+  color: #1760ed;
 }
 .footer-contact-row svg {
   color: #1760ed;

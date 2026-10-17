@@ -20,7 +20,7 @@ export default function DataLayerPage() {
             We architect robust data pipelines, data lakes, and warehouses that turn chaotic raw data into structured, actionable business intelligence. Stop guessing. Start knowing.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+            <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
               Request a Data Audit <ArrowRight size={16} />
             </Link>
           </motion.div>
@@ -151,7 +151,7 @@ export default function DataLayerPage() {
       <section className="solution-cta">
         <h2>Stop guessing. Start knowing.</h2>
         <p>Your competitors are already weaponizing their data. It's time to build your data layer.</p>
-        <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+        <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
           Talk to a Data Engineer <ArrowRight size={16} />
         </Link>
       </section>

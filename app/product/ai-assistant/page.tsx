@@ -28,7 +28,7 @@ export default function AiAssistantPage() {
             Tekkzy AI Assistant connects to all your business systems — ERP, CRM, analytics, documents — and gives every team member the power to ask questions, get answers, and take action using natural language.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>Try AI Assistant <ArrowRight size={16} /></Link>
+            <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>Try AI Assistant <ArrowRight size={16} /></Link>
             <Link href="/product/automation" className="button button-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>See Automation</Link>
           </motion.div>
         </div>
@@ -91,7 +91,7 @@ export default function AiAssistantPage() {
       <section className="cta-section section-shell">
         <div><h2>Put AI to work for your business.</h2><p>See how Tekkzy AI Assistant can transform how your team operates, decides, and grows.</p></div>
         <div className="cta-actions">
-          <Link className="button" href="/#contact">Request AI Demo <ArrowRight size={16} /></Link>
+          <Link className="button" href="/contact">Request AI Demo <ArrowRight size={16} /></Link>
           <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>

@@ -35,7 +35,7 @@ export default function ErpPage() {
             Tekkzy ERP unifies finance, inventory, HR, procurement, and operations into a single intelligent system. Stop managing spreadsheets — start managing your business.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+            <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
               Request a Demo <ArrowRight size={16} />
             </Link>
             <Link href="/product/solutions/core-business" className="button button-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
@@ -122,7 +122,7 @@ export default function ErpPage() {
       <section className="cta-section section-shell">
         <div><h2>Ready to modernize your operations?</h2><p>Get a personalized demo of Tekkzy ERP tailored to your industry and business size.</p></div>
         <div className="cta-actions">
-          <Link className="button" href="/#contact">Schedule a Demo <ArrowRight size={16} /></Link>
+          <Link className="button" href="/contact">Schedule a Demo <ArrowRight size={16} /></Link>
           <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>

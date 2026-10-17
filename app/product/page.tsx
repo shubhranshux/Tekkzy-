@@ -75,7 +75,7 @@ function Reveal({ children, className = "", delay = 0 }: { children: React.React
   );
 }
 
-function SectionIntro({ eyebrow, title, copy, link, href = "#contact" }: { eyebrow: string; title: React.ReactNode; copy?: string; link?: string; href?: string }) {
+function SectionIntro({ eyebrow, title, copy, link, href = "/contact" }: { eyebrow: string; title: React.ReactNode; copy?: string; link?: string; href?: string }) {
   return (
     <div className="section-intro">
       <span className="eyebrow">{eyebrow}</span>
@@ -377,9 +377,9 @@ export default function Home() {
       <section className="delivery-section section-shell">
         <Reveal><span className="eyebrow">DESIGNED FOR MOMENTUM</span><h2>Modern Tekkzy delivery.<br />Built around your people.</h2><p>From the first workshop to your next major milestone, we make complex transformation feel clear, collaborative and achievable.</p></Reveal>
         <div className="delivery-grid">
-          <Reveal delay={0.06} className="delivery-card"><span>01</span><div className="delivery-icon" data-gsap-icon><UsersRound /></div><h3>Business-first discovery</h3><p>We map the real decisions, constraints and opportunities behind the brief—before we write a line of code.</p><a href="#contact">Explore our approach <ArrowRight size={14} /></a></Reveal>
+          <Reveal delay={0.06} className="delivery-card"><span>01</span><div className="delivery-icon" data-gsap-icon><UsersRound /></div><h3>Business-first discovery</h3><p>We map the real decisions, constraints and opportunities behind the brief—before we write a line of code.</p><Link href="/contact">Explore our approach <ArrowRight size={14} /></Link></Reveal>
           <Reveal delay={0.12} className="delivery-card featured"><span>02</span><div className="delivery-icon" data-gsap-icon><Layers3 /></div><h3>Composed for change</h3><p>Modular technology, thoughtful integrations and practical design give your team room to move.</p><div className="delivery-orbit" data-gsap-orbit><i /><i /><i /><b>+</b></div></Reveal>
-          <Reveal delay={0.18} className="delivery-card"><span>03</span><div className="delivery-icon" data-gsap-icon><Activity /></div><h3>Improvement that compounds</h3><p>Once live, every insight and optimization makes the next stage of growth more confident.</p><a href="#contact">Meet the team <ArrowRight size={14} /></a></Reveal>
+          <Reveal delay={0.18} className="delivery-card"><span>03</span><div className="delivery-icon" data-gsap-icon><Activity /></div><h3>Improvement that compounds</h3><p>Once live, every insight and optimization makes the next stage of growth more confident.</p><Link href="/contact">Meet the team <ArrowRight size={14} /></Link></Reveal>
         </div>
       </section>
 
@@ -406,7 +406,7 @@ export default function Home() {
 
       <section id="contact" className="cta-section section-shell">
         <div><h2>Let&apos;s build what&apos;s next with Tekkzy.</h2><p>Tell us about your idea, your challenge or your vision.<br />We&apos;ll help you build the system that gets you there.</p></div>
-        <div className="cta-actions"><a className="button" href="mailto:hello@tekkzy.com">Start a Project <ArrowRight size={16} /></a><a className="text-link" href="mailto:hello@tekkzy.com">Talk to an Expert <ArrowRight size={14} /></a></div>
+        <div className="cta-actions"><Link className="button" href="/contact">Start a Project <ArrowRight size={16} /></Link><Link className="text-link" href="/contact">Talk to an Expert <ArrowRight size={14} /></Link></div>
         <div className="isometric" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
       </section>
 

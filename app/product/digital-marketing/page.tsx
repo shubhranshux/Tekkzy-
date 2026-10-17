@@ -203,7 +203,7 @@ export default function DigitalMarketingPage() {
               We create digital marketing strategies that help your brand get noticed, generate leads, and turn attention into measurable growth.
             </motion.p>
             <motion.div className="dm-hero-actions" {...fade(0.2)}>
-              <Link href="/#contact" className="dm-primary-button">
+              <Link href="/contact" className="dm-primary-button">
                 Get a Free Strategy Call <ArrowRight size={16} />
               </Link>
               <Link href="#services" className="dm-secondary-button">
@@ -280,7 +280,7 @@ export default function DigitalMarketingPage() {
               <div className="dm-service-body">
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
-                <Link href="/#contact" className="dm-service-link">
+                <Link href="/contact" className="dm-service-link">
                   Get Started <ArrowRight size={13} />
                 </Link>
               </div>
@@ -368,7 +368,7 @@ export default function DigitalMarketingPage() {
               <li><CheckCircle2 size={18} /> <span><strong>Full-funnel approach</strong> — From awareness to conversion to retention</span></li>
               <li><CheckCircle2 size={18} /> <span><strong>No long-term contracts</strong> — Performance keeps you, not paperwork</span></li>
             </ul>
-            <Link href="/#contact" className="button" style={{ marginTop: "24px", background: "#2ba88e", borderColor: "#2ba88e" }}>
+            <Link href="/contact" className="button" style={{ marginTop: "24px", background: "#2ba88e", borderColor: "#2ba88e" }}>
               Start Growing Today <ArrowRight size={16} />
             </Link>
           </div>
@@ -392,7 +392,7 @@ export default function DigitalMarketingPage() {
             <p style={{ color: "#8fa0c4", margin: 0, fontSize: "15px" }}>Get a free marketing audit and discover untapped growth opportunities.</p>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-            <Link className="button" href="/#contact" style={{ background: "#2ba88e", borderColor: "#2ba88e" }}>Get Free Audit <ArrowRight size={16} /></Link>
+            <Link className="button" href="/contact" style={{ background: "#2ba88e", borderColor: "#2ba88e" }}>Get Free Audit <ArrowRight size={16} /></Link>
             <Link className="text-link" href="/product" style={{ color: "#7da9ff" }}>View All Products <ArrowRight size={14} /></Link>
           </div>
         </div>

@@ -21,7 +21,7 @@ export default function HrSuitePage() {
               From hiring to retiring — manage every aspect of the employee journey with a platform that&apos;s as human as the people it serves.
             </motion.p>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ marginTop: "32px", display: "flex", gap: "16px", flexWrap: "wrap" }}>
-              <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#e05690", borderColor: "#e05690" }}>Start Free Trial <ArrowRight size={16} /></Link>
+              <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#e05690", borderColor: "#e05690" }}>Start Free Trial <ArrowRight size={16} /></Link>
             </motion.div>
           </div>
           {/* Employee card stack — unique visual */}
@@ -94,7 +94,7 @@ export default function HrSuitePage() {
       <section className="cta-section section-shell">
         <div><h2>Build a workplace people love.</h2><p>See how Tekkzy HR Suite transforms the employee experience from day one.</p></div>
         <div className="cta-actions">
-          <Link className="button" href="/#contact" style={{ background: "#e05690", borderColor: "#e05690" }}>Start Free Trial <ArrowRight size={16} /></Link>
+          <Link className="button" href="/contact" style={{ background: "#e05690", borderColor: "#e05690" }}>Start Free Trial <ArrowRight size={16} /></Link>
           <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>

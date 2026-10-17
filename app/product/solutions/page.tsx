@@ -300,7 +300,7 @@ export default function SolutionsIndexPage() {
           stack — for free.
         </p>
         <Link
-          href="/#contact"
+          href="/contact"
           className="button"
           style={{
             display: "inline-flex",

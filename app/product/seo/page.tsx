@@ -28,7 +28,7 @@ export default function SeoPage() {
           Tekkzy SEO combines technical expertise, data-driven strategy, and AI-powered content to dominate search rankings and drive sustainable organic growth.
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#f59e0b", borderColor: "#f59e0b" }}>Get Free SEO Audit <ArrowRight size={16} /></Link>
+          <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#f59e0b", borderColor: "#f59e0b" }}>Get Free SEO Audit <ArrowRight size={16} /></Link>
           <Link href="/product/digital-marketing" className="button button-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>See Digital Marketing</Link>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function SeoPage() {
       <section className="cta-section section-shell">
         <div><h2>Ready to own page one?</h2><p>Get a free SEO audit and discover how much organic traffic you&apos;re leaving on the table.</p></div>
         <div className="cta-actions">
-          <Link className="button" href="/#contact" style={{ background: "#f59e0b", borderColor: "#f59e0b" }}>Get Free SEO Audit <ArrowRight size={16} /></Link>
+          <Link className="button" href="/contact" style={{ background: "#f59e0b", borderColor: "#f59e0b" }}>Get Free SEO Audit <ArrowRight size={16} /></Link>
           <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>

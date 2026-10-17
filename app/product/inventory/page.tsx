@@ -21,7 +21,7 @@ export default function InventoryPage() {
               Track every item across every warehouse in real-time. Automate reorders, prevent stockouts, and optimize your supply chain with AI-powered demand forecasting.
             </motion.p>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", justifyContent: "center" }}>
-              <Link href="/#contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#d97b1e", borderColor: "#d97b1e" }}>Start Tracking <ArrowRight size={16} /></Link>
+              <Link href="/contact" className="button" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#d97b1e", borderColor: "#d97b1e" }}>Start Tracking <ArrowRight size={16} /></Link>
             </motion.div>
           </div>
 
@@ -73,7 +73,7 @@ export default function InventoryPage() {
       <section className="cta-section section-shell">
         <div><h2>Never run out of stock again.</h2><p>See how Tekkzy Inventory gives you complete control over your supply chain.</p></div>
         <div className="cta-actions">
-          <Link className="button" href="/#contact" style={{ background: "#d97b1e", borderColor: "#d97b1e" }}>Start Tracking <ArrowRight size={16} /></Link>
+          <Link className="button" href="/contact" style={{ background: "#d97b1e", borderColor: "#d97b1e" }}>Start Tracking <ArrowRight size={16} /></Link>
           <Link className="text-link" href="/product">View All Products <ArrowRight size={14} /></Link>
         </div>
       </section>

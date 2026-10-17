@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -90,8 +91,7 @@ const principles = [
     ],
     stat: "99.99%",
     statLabel: "Guaranteed Uptime SLA",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=900&q=80",
+    image: "/images/uncompromising-trust.jpg",
   },
 ];
 
@@ -482,14 +482,14 @@ export default function PrinciplesSection() {
                       </div>
 
                       {/* CTA link */}
-                      <a href="#contact" className="principles-card-cta">
+                      <Link href="/contact" className="principles-card-cta">
                         <span>Learn how we apply this</span>
                         <ArrowRight
                           size={16}
                           strokeWidth={2.5}
                           style={{ color: p.accent }}
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 );

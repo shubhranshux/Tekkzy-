@@ -19,7 +19,7 @@ export default function CoreBusinessPage() {
           Legacy systems and manual workflows drain resources and stall growth. We implement intelligent, scalable ERP and operational systems that automate the mundane and provide real-time visibility into your entire business.
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} style={{ display: "flex", gap: "16px", justifyContent: "center" }}>
-          <Link href="/#contact" className="button" style={{ background: "#1760ed", color: "#fff", display: "inline-flex", alignItems: "center", gap: "8px", border: "none" }}>
+          <Link href="/contact" className="button" style={{ background: "#1760ed", color: "#fff", display: "inline-flex", alignItems: "center", gap: "8px", border: "none" }}>
             Schedule an Operations Audit <ArrowRight size={16} />
           </Link>
         </motion.div>
@@ -158,7 +158,7 @@ export default function CoreBusinessPage() {
       <section className="solution-cta" style={{ background: "#0b152a", color: "#fff" }}>
         <h2 style={{ color: "#fff" }}>Stop managing spreadsheets. Start managing growth.</h2>
         <p style={{ color: "#8ba0c8" }}>Let's architect an operational backbone that scales infinitely.</p>
-        <Link href="/#contact" className="button" style={{ background: "#1760ed", color: "#fff", display: "inline-flex", alignItems: "center", gap: "8px", border: "none" }}>
+        <Link href="/contact" className="button" style={{ background: "#1760ed", color: "#fff", display: "inline-flex", alignItems: "center", gap: "8px", border: "none" }}>
           Contact Our Architects <ArrowRight size={16} />
         </Link>
       </section>
