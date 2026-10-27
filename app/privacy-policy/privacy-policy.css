@@ -1,0 +1,7 @@
+/* Privacy Policy page styles are fully managed with Tailwind CSS */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm 14mm 14mm;
+  }
+}

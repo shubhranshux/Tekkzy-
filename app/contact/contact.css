@@ -18,10 +18,15 @@
 /* ── Hero Section ── */
 .contact-hero {
   position: relative;
-  padding: 130px 24px 48px;
-  max-width: 1280px;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  padding: 104px 24px 44px !important;
+  max-width: 100% !important;
+  width: 100% !important;
   margin: 0 auto;
   text-align: center;
+  box-sizing: border-box !important;
+  color: #0f172a !important;
 }
 
 .contact-badge-pill {
@@ -29,21 +34,21 @@
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: rgba(23, 96, 237, 0.08);
-  border: 1px solid rgba(23, 96, 237, 0.2);
+  background: #eff6ff !important;
+  border: 1px solid #dbeafe !important;
   border-radius: 9999px;
-  color: #1760ed;
+  color: #125af5 !important;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 14px !important;
 }
 
 .dark .contact-badge-pill {
-  background: rgba(23, 96, 237, 0.16);
-  border-color: rgba(96, 165, 250, 0.3);
-  color: #60a5fa;
+  background: rgba(56, 189, 248, 0.16) !important;
+  border-color: rgba(56, 189, 248, 0.35) !important;
+  color: #38bdf8 !important;
 }
 
 .contact-hero h1 {
@@ -51,31 +56,40 @@
   font-weight: 850;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  color: #0b1734;
-  margin: 0 auto 18px;
+  color: #0f172a !important;
+  margin: 0 auto 14px !important;
   max-width: 900px;
 }
 
 .dark .contact-hero h1 {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .contact-hero h1 span {
-  background: linear-gradient(135deg, #1760ed 0%, #7c3aed 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #125af5 0%, #0850e4 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block;
+}
+
+.dark .contact-hero h1 span {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .contact-hero p {
   font-size: clamp(16px, 1.8vw, 19px);
   line-height: 1.6;
-  color: #475569;
+  color: #334155 !important;
   max-width: 660px;
-  margin: 0 auto 28px;
+  margin: 0 auto 24px !important;
 }
 
 .dark .contact-hero p {
-  color: #94a3b8;
+  color: #cbd5e1 !important;
 }
 
 .contact-quick-perks {

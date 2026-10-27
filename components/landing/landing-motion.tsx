@@ -52,7 +52,6 @@ export default function LandingMotion({ children }: { children: React.ReactNode 
       });
 
       const landingCardGroups = [
-        { selector: ".hiw-step-item", trigger: ".hiw-section", y: 24, stagger: .09 },
         { selector: ".value-card", trigger: ".values-section", y: 20, stagger: .08 },
         { selector: ".pricing-card-enhanced", trigger: ".pricing-section", y: 26, stagger: .1 },
         { selector: ".testimonial-card", trigger: ".testimonial-carousel-section", y: 18, stagger: .07 },

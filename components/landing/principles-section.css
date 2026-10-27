@@ -1,0 +1,284 @@
+/* ═════════════════════════════════════════════════════════════════════════
+   PRINCIPLES SECTION (Inspired by FMI Industries Horizontal Banners)
+   Stacked wide horizontal cards with rich physical depth:
+   - Darker slate-gray background (#e5ebf3) for maximum card contrast
+   - Crisp #ffffff cards with tactile drop shadow
+   - Smooth animated accordion dropdown on click
+   - Circular arrow button (fills Tekkzy Blue on hover/active)
+   ═════════════════════════════════════════════════════════════════════════ */
+
+.principles-fmi-section {
+  position: relative;
+  background-color: #e5ebf3 !important;
+  color: #0b1734 !important;
+  padding: clamp(90px, 9vw, 150px) clamp(20px, 4.5vw, 48px);
+  border-top: 1px solid #d9e2ec;
+  border-bottom: 1px solid #d9e2ec;
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.principles-fmi-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ── Section Header ── */
+.principles-fmi-header {
+  max-width: 880px;
+  margin-bottom: clamp(52px, 6vw, 84px);
+}
+
+.principles-fmi-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-space-grotesk), monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #125af5;
+  margin-bottom: 18px;
+}
+
+.principles-fmi-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #125af5;
+}
+
+.principles-fmi-header h2 {
+  font-family: 'Bricolage Grotesque', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: clamp(32px, 4.2vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #0b1734;
+  margin: 0 0 18px 0;
+}
+
+.principles-fmi-header h2 span {
+  color: #125af5;
+}
+
+.principles-fmi-header p {
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* ── Stack of Horizontal Banner Cards (Exact FMI Style) ── */
+.principles-fmi-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 2vw, 26px);
+  width: 100%;
+}
+
+/* Individual Banner Card with Depth Effect */
+.principles-fmi-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px 1fr 64px;
+  align-items: center;
+  gap: clamp(20px, 3vw, 44px);
+  background: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: clamp(36px, 4.2vw, 56px) clamp(28px, 3.8vw, 52px);
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+  box-shadow: 0 14px 36px -6px rgba(15, 23, 42, 0.08), 
+              0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.principles-fmi-card:hover {
+  transform: translateY(-5px);
+  border-color: #125af5;
+  box-shadow: 0 24px 54px -10px rgba(18, 90, 245, 0.2), 
+              0 0 0 1.5px #125af5;
+}
+
+.principles-fmi-card.is-expanded {
+  border-color: #125af5;
+  box-shadow: 0 24px 56px -10px rgba(18, 90, 245, 0.18), 
+              0 0 0 1.5px #125af5;
+}
+
+/* Left: Index Number */
+.principles-fmi-num {
+  font-family: var(--font-space-grotesk), monospace;
+  font-size: clamp(16px, 1.3vw, 20px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  transition: color 0.3s ease;
+}
+
+.principles-fmi-card:hover .principles-fmi-num,
+.principles-fmi-card.is-expanded .principles-fmi-num {
+  color: #125af5;
+}
+
+/* Middle: Title & Description */
+.principles-fmi-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.principles-fmi-title {
+  font-family: 'Bricolage Grotesque', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #0b1734;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.principles-fmi-desc {
+  font-size: clamp(15px, 1.12vw, 17px);
+  line-height: 1.65;
+  color: #53617a;
+  margin: 14px 0 0 0;
+  max-width: 820px;
+  transition: color 0.3s ease;
+}
+
+/* Right: Circular Arrow Button */
+.principles-fmi-arrow-btn {
+  width: clamp(48px, 4vw, 56px);
+  height: clamp(48px, 4vw, 56px);
+  border-radius: 50%;
+  border: 1.5px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+  background: transparent;
+  flex-shrink: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principles-fmi-card:hover .principles-fmi-arrow-btn,
+.principles-fmi-card.is-expanded .principles-fmi-arrow-btn {
+  background: #125af5;
+  border-color: #125af5;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.principles-fmi-arrow-icon {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principles-fmi-card:hover .principles-fmi-arrow-icon {
+  transform: translateX(3px);
+}
+
+.principles-fmi-card.is-expanded .principles-fmi-arrow-icon {
+  transform: rotate(90deg);
+}
+
+/* Smooth Dropdown Animation Wrapper */
+.principles-fmi-details-wrapper {
+  grid-column: 2 / 4;
+}
+
+.principles-fmi-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 32px;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #edf2f7;
+}
+
+.principles-fmi-commit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.principles-fmi-commit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #125af5;
+}
+
+.principles-fmi-stat-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-left: auto;
+  padding: 6px 14px;
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.principles-fmi-stat-badge strong {
+  font-family: var(--font-space-grotesk), monospace;
+  font-size: 17px;
+  color: #125af5;
+}
+
+.principles-fmi-stat-badge span {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* ────────────────────────────────────────────── */
+/* RESPONSIVE LAYOUT                              */
+/* ────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .principles-fmi-card {
+    grid-template-columns: 50px 1fr auto;
+    gap: 20px;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .principles-fmi-section {
+    padding: 60px 18px;
+  }
+
+  .principles-fmi-card {
+    grid-template-columns: 1fr auto;
+    padding: 28px 20px;
+    gap: 16px;
+  }
+
+  .principles-fmi-num {
+    grid-column: 1 / 3;
+    margin-bottom: -6px;
+  }
+
+  .principles-fmi-title {
+    font-size: 24px;
+  }
+
+  .principles-fmi-desc {
+    font-size: 14.5px;
+    margin-top: 10px;
+  }
+
+  .principles-fmi-details-wrapper {
+    grid-column: 1 / 3;
+  }
+}

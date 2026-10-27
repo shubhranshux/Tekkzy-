@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Star, BadgeCheck, Quote } from "lucide-react";
+import { Star, BadgeCheck } from "lucide-react";
 
 export interface TestimonialItem {
   id: string;
@@ -214,12 +214,11 @@ export default function TestimonialsSection() {
                 )}
               </div>
 
-              {/* Quote */}
+              {/* Review Text without quote icon/marks */}
               <div className="testimonial-quote-box">
-                <Quote size={18} className="testimonial-quote-icon" />
-                <blockquote className="testimonial-quote-text">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
+                <p className="testimonial-quote-text">
+                  {t.quote}
+                </p>
               </div>
 
               {/* Author Row */}

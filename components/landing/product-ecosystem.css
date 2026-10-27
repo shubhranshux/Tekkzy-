@@ -1,0 +1,266 @@
+/* ═════════════════════════════════════════════════════════════════════════
+   PRODUCT ECOSYSTEM GRID SECTION (Cominvi Style - Pitch Black Theme)
+   Component Background: Pure Pitch Black (#000000)
+   Cards: Pure White by default, smoothly turns Dark Blue on hover
+   ═════════════════════════════════════════════════════════════════════════ */
+
+.product-grid-section {
+  position: relative;
+  background: #000000 !important;
+  color: #ffffff !important;
+  padding: clamp(80px, 8.5vw, 130px) clamp(20px, 4vw, 48px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.product-grid-section::before {
+  display: none !important;
+}
+
+.product-grid-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* ── Section Header ── */
+.product-grid-header {
+  max-width: 860px;
+  margin-bottom: clamp(48px, 6vw, 76px);
+}
+
+.product-grid-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-space-grotesk), monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #38bdf8;
+  margin-bottom: 16px;
+}
+
+.product-grid-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+}
+
+.product-grid-header h2 {
+  font-family: 'Bricolage Grotesque', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: clamp(32px, 4.2vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffffff !important;
+  margin: 0 0 18px 0;
+}
+
+.product-grid-header h2 span {
+  color: #125af5;
+}
+
+.product-grid-header p {
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72) !important;
+  margin: 0;
+  max-width: 680px;
+}
+
+/* ── The 3x3 Grid ── */
+.cominvi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+  width: 100%;
+}
+
+/* ── All Cards: Deep Rich Jet Black in Default State ── */
+.cominvi-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(165deg, #07090e 0%, #030407 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px;
+  padding: clamp(32px, 3.4vw, 46px);
+  min-height: clamp(340px, 32vw, 410px);
+  text-decoration: none !important;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.04) inset !important;
+  transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease;
+}
+
+/* Top bar inside card */
+.cominvi-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.cominvi-card-tag {
+  font-family: var(--font-space-grotesk), monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #38bdf8 !important;
+  transition: color 0.3s ease;
+}
+
+.cominvi-card-icon-wrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #38bdf8 !important;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Middle content area */
+.cominvi-card-content {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 12px 0;
+}
+
+.cominvi-card-title {
+  font-family: 'Bricolage Grotesque', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #ffffff !important;
+  margin: 0 0 14px 0;
+  transition: color 0.3s ease;
+}
+
+.cominvi-card-desc {
+  font-size: clamp(14px, 1.05vw, 15.5px);
+  line-height: 1.6;
+  color: #94a3b8 !important;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* Bottom CTA line */
+.cominvi-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: border-color 0.3s ease;
+}
+
+.cominvi-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-space-grotesk), monospace;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.cominvi-card-arrow {
+  color: #38bdf8 !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   HOVER STATE: CARD CONVERTS INTO SOPHISTICATED DEEP NAVY BLUE
+   ═════════════════════════════════════════════════════════════════════════ */
+.cominvi-card:hover {
+  background: linear-gradient(145deg, #0e275c 0%, #081738 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(96, 165, 250, 0.5) !important;
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 24px 50px -10px rgba(8, 22, 58, 0.85),
+              0 0 35px rgba(15, 39, 89, 0.4),
+              0 0 0 1px rgba(96, 165, 250, 0.25) inset !important;
+}
+
+.cominvi-card:hover .cominvi-card-tag {
+  color: #93c5fd !important;
+}
+
+.cominvi-card:hover .cominvi-card-icon-wrap {
+  color: #60a5fa !important;
+  transform: scale(1.15) rotate(4deg);
+}
+
+.cominvi-card:hover .cominvi-card-title {
+  color: #ffffff !important;
+}
+
+.cominvi-card:hover .cominvi-card-desc {
+  color: #e2e8f0 !important;
+}
+
+.cominvi-card:hover .cominvi-card-bottom {
+  border-top-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.cominvi-card:hover .cominvi-card-cta {
+  color: #ffffff !important;
+  gap: 12px;
+}
+
+.cominvi-card:hover .cominvi-card-arrow {
+  color: #60a5fa !important;
+  transform: translate(4px, -4px);
+}
+
+/* ────────────────────────────────────────────── */
+/* RESPONSIVE LAYOUT                              */
+/* ────────────────────────────────────────────── */
+@media (max-width: 1080px) {
+  .cominvi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .product-grid-section {
+    padding: 60px 18px;
+  }
+
+  .cominvi-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cominvi-card {
+    min-height: 290px;
+    padding: 28px 22px;
+  }
+
+  .product-grid-header {
+    margin-bottom: 36px;
+  }
+
+  .product-grid-header h2 {
+    font-size: 28px;
+  }
+}

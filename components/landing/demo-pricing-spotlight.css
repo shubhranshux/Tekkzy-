@@ -1,0 +1,195 @@
+/* ═════════════════════════════════════════════════════════════════════════
+   MINIMAL PRICING SPOTLIGHT (STARTS FROM ₹699 & BOOK A CALL)
+   ═════════════════════════════════════════════════════════════════════════ */
+
+.demo-pricing-section {
+  position: relative;
+  width: 100%;
+  background: #02040d;
+  color: #ffffff;
+  padding: clamp(60px, 8vw, 110px) clamp(20px, 4vw, 48px);
+  overflow: hidden;
+  box-sizing: border-box;
+  isolation: isolate;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ambient Radial Glow */
+.demo-pricing-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(750px, 90vw);
+  height: 450px;
+  background: radial-gradient(circle, rgba(47, 123, 255, 0.16) 0%, rgba(31, 91, 255, 0.04) 50%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.demo-pricing-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Minimalist Showcase Card ── */
+.demo-minimal-card {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(165deg, rgba(8, 14, 28, 0.75) 0%, rgba(3, 6, 14, 0.92) 100%);
+  border: 1px solid rgba(47, 123, 255, 0.28);
+  border-radius: clamp(20px, 3vw, 28px);
+  padding: clamp(36px, 5.5vw, 64px) clamp(24px, 4.5vw, 56px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(47, 123, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.demo-minimal-card:hover {
+  border-color: rgba(47, 123, 255, 0.45);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 55px rgba(47, 123, 255, 0.2);
+}
+
+/* Eyebrow Badge */
+.demo-minimal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 16px;
+  border-radius: 99px;
+  background: rgba(47, 123, 255, 0.12);
+  border: 1px solid rgba(47, 123, 255, 0.35);
+  color: #93c5fd;
+  font-family: var(--font-space-grotesk), monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.demo-minimal-title {
+  font-family: 'Bricolage Grotesque', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+
+.demo-minimal-price {
+  background: linear-gradient(135deg, #60a5fa 0%, #2f7bff 55%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  font-size: 1.12em;
+  font-weight: 800;
+  display: inline-block;
+  filter: drop-shadow(0 0 20px rgba(47, 123, 255, 0.35));
+}
+
+.demo-minimal-period {
+  font-size: 0.52em;
+  font-weight: 600;
+  color: rgba(200, 214, 240, 0.75);
+  letter-spacing: -0.01em;
+}
+
+/* Description */
+.demo-minimal-desc {
+  font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
+  font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+  line-height: 1.6;
+  color: rgba(200, 214, 240, 0.85);
+  max-width: 580px;
+  margin: 0 auto clamp(26px, 3.5vw, 36px);
+}
+
+/* CTA Actions */
+.demo-minimal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.demo-minimal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  border-radius: 99px;
+  background: linear-gradient(180deg, #2c5cff 0%, #1b45f2 100%);
+  color: #ffffff !important;
+  font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 10px 36px rgba(30, 80, 255, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.demo-minimal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 48px rgba(50, 110, 255, 0.7);
+  filter: brightness(1.08);
+}
+
+.demo-btn-arrow {
+  transition: transform 0.25s ease;
+}
+
+.demo-minimal-btn:hover .demo-btn-arrow {
+  transform: translateX(4px);
+}
+
+.demo-minimal-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 24px;
+  border-radius: 99px;
+  border: 1px solid rgba(238, 243, 255, 0.22);
+  background: rgba(2, 4, 13, 0.4);
+  color: rgba(200, 214, 240, 0.88);
+  font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.demo-minimal-secondary:hover {
+  background: rgba(238, 243, 255, 0.1);
+  border-color: rgba(238, 243, 255, 0.4);
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .demo-minimal-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .demo-minimal-btn,
+  .demo-minimal-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

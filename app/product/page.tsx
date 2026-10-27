@@ -190,7 +190,6 @@ export default function Home() {
 
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
-          <Reveal><Pill icon={Sparkles}>TEKKZY INTELLIGENT CLOUD</Pill></Reveal>
           <Reveal delay={0.08}><h1>BUILD THE<br /><span>SYSTEMS</span><br />THAT MOVE YOUR<br />BUSINESS.</h1></Reveal>
           <Reveal delay={0.14}><p>Tekkzy Intelligent Cloud connects your software, data, AI, digital marketing, automation and infrastructure into one intelligent platform built for growth.</p></Reveal>
           <Reveal delay={0.2} className="hero-actions"><a className="button" href="#solution">Explore Platform <ArrowRight size={16} /></a><a className="button button-outline" href="#journey"><PlayCircle size={15} /> How It Works</a></Reveal>
@@ -211,56 +210,122 @@ export default function Home() {
         <div className="hero-diagram" aria-label="Platform integration diagram">
           <div className="dot-field" />
           
-          <svg className="diagram-lines" viewBox="0 0 800 600" preserveAspectRatio="none">
+          <svg className="diagram-lines" viewBox="0 0 680 520" preserveAspectRatio="none">
             {/* Top (Digital Experience) */}
-            <motion.path d="M 400 300 L 400 120" stroke="#a0b8fa" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }} viewport={{ once: true, margin: "-100px" }} />
-            <motion.circle cx="400" cy="120" r="4" fill="#a0b8fa" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.path d="M 340 180 L 340 104" stroke="#3b82f6" strokeWidth="2.5" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 0.85, delay: 0.35, ease: "easeOut" }} viewport={{ once: true, margin: "-60px" }} />
+            <motion.circle cx="340" cy="104" r="5" fill="#2563eb" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.0, duration: 0.25 }} viewport={{ once: true, margin: "-60px" }} />
             
             {/* Top Left (Business Systems) */}
-            <motion.path d="M 330 300 C 230 300, 230 200, 230 200" stroke="#a7e0c4" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }} viewport={{ once: true, margin: "-100px" }} />
-            <motion.circle cx="230" cy="200" r="4" fill="#a7e0c4" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.7, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.path d="M 260 230 C 215 230, 215 148, 187 148" stroke="#10b981" strokeWidth="2.5" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 0.85, delay: 0.5, ease: "easeOut" }} viewport={{ once: true, margin: "-60px" }} />
+            <motion.circle cx="187" cy="148" r="5" fill="#059669" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.15, duration: 0.25 }} viewport={{ once: true, margin: "-60px" }} />
             
             {/* Bottom Left (Data) */}
-            <motion.path d="M 330 340 C 210 340, 210 400, 210 400" stroke="#a7e0c4" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 0.4 }} viewport={{ once: true, margin: "-100px" }} />
-            <motion.circle cx="210" cy="400" r="4" fill="#a7e0c4" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.9, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.path d="M 260 290 C 215 290, 215 372, 187 372" stroke="#059669" strokeWidth="2.5" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 0.85, delay: 0.65, ease: "easeOut" }} viewport={{ once: true, margin: "-60px" }} />
+            <motion.circle cx="187" cy="372" r="5" fill="#047857" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.3, duration: 0.25 }} viewport={{ once: true, margin: "-60px" }} />
             
             {/* Top Right (Intelligence) */}
-            <motion.path d="M 470 290 C 580 290, 580 220, 580 220" stroke="#d5c8fa" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 0.6 }} viewport={{ once: true, margin: "-100px" }} />
-            <motion.circle cx="580" cy="220" r="4" fill="#d5c8fa" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 2.1, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.path d="M 420 230 C 465 230, 465 148, 493 148" stroke="#8b5cf6" strokeWidth="2.5" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 0.85, delay: 0.5, ease: "easeOut" }} viewport={{ once: true, margin: "-60px" }} />
+            <motion.circle cx="493" cy="148" r="5" fill="#7c3aed" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.15, duration: 0.25 }} viewport={{ once: true, margin: "-60px" }} />
             
             {/* Bottom Right (Automation) */}
-            <motion.path d="M 470 350 C 560 350, 560 410, 560 410" stroke="#fbdec7" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 0.8 }} viewport={{ once: true, margin: "-100px" }} />
-            <motion.circle cx="560" cy="410" r="4" fill="#fbdec7" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 2.3, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.path d="M 420 290 C 465 290, 465 372, 493 372" stroke="#f97316" strokeWidth="2.5" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 0.85, delay: 0.65, ease: "easeOut" }} viewport={{ once: true, margin: "-60px" }} />
+            <motion.circle cx="493" cy="372" r="5" fill="#ea580c" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.3, duration: 0.25 }} viewport={{ once: true, margin: "-60px" }} />
             
             {/* Bottom (Cloud & Infrastructure) */}
-            <motion.path d="M 400 380 L 400 470" stroke="#a0b8fa" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1.5, ease: "easeInOut", delay: 1.0 }} viewport={{ once: true, margin: "-100px" }} />
-            <motion.circle cx="400" cy="470" r="4" fill="#a0b8fa" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 2.5, duration: 0.3 }} viewport={{ once: true, margin: "-100px" }} />
+            <motion.path d="M 340 340 L 340 416" stroke="#2563eb" strokeWidth="2.5" fill="none" initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 0.85, delay: 0.45, ease: "easeOut" }} viewport={{ once: true, margin: "-60px" }} />
+            <motion.circle cx="340" cy="416" r="5" fill="#1d4ed8" initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.1, duration: 0.25 }} viewport={{ once: true, margin: "-60px" }} />
           </svg>
 
-          <motion.div className="diagram-node digital" animate={reduced ? {} : { y: [-2, 2] }} transition={{...floatTransition, delay: 0}}>
-            <DiagramBox icon={MonitorSmartphone} title="DIGITAL EXPERIENCE" items={["Web", "Mobile", "PWA", "Portal", "E-commerce"]} />
-          </motion.div>
-          <motion.div className="diagram-node business" animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 0.4 }}>
-            <DiagramBox icon={BriefcaseBusiness} title="BUSINESS SYSTEMS" items={["ERP", "CRM", "HR", "Finance", "Inventory"]} />
-          </motion.div>
-          <motion.div className="diagram-node data" animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 0.8 }}>
-            <DiagramBox icon={Database} title="DATA" items={["Databases", "Warehouse", "Integration"]} />
-          </motion.div>
-          <motion.div className="diagram-node intelligence" animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 0.5 }}>
-            <DiagramBox icon={BrainCircuit} title="INTELLIGENCE" items={["AI", "Analytics", "Automation"]} />
-          </motion.div>
-          <motion.div className="diagram-node automation" animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 1.1 }}>
-            <DiagramBox icon={Zap} title="AUTOMATION" items={["Workflows", "Approvals", "AI Agents"]} />
-          </motion.div>
-          
-          <motion.div className="diagram-node cloud-infra-node" animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 0.2 }}>
-            <DiagramBox icon={Cloud} title="CLOUD & INFRASTRUCTURE" items={["Cloud", "Security", "Scalability", "Backup"]} />
+          {/* Top: Digital Experience - emerges upward from behind center cloud */}
+          <motion.div
+            className="diagram-node digital"
+            initial={reduced ? { opacity: 1 } : { x: 0, y: 200, scale: 0.2, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, scale: 1, opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring", stiffness: 70, damping: 14, mass: 0.9, delay: 0.25 }}
+          >
+            <motion.div animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 1.4 }}>
+              <DiagramBox icon={MonitorSmartphone} title="DIGITAL EXPERIENCE" items={["Web", "Mobile", "PWA", "Portal", "E-commerce"]} />
+            </motion.div>
           </motion.div>
 
-          <div className="core-cloud" data-gsap-pulse>
+          {/* Top-Left: Business Systems - emerges diagonally up-left from behind center cloud */}
+          <motion.div
+            className="diagram-node business"
+            initial={reduced ? { opacity: 1 } : { x: 241, y: 112, scale: 0.2, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, scale: 1, opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring", stiffness: 70, damping: 14, mass: 0.9, delay: 0.4 }}
+          >
+            <motion.div animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 1.6 }}>
+              <DiagramBox icon={BriefcaseBusiness} title="BUSINESS SYSTEMS" items={["ERP", "CRM", "HR", "Finance", "Inventory"]} />
+            </motion.div>
+          </motion.div>
+
+          {/* Bottom-Left: Data - emerges diagonally down-left from behind center cloud */}
+          <motion.div
+            className="diagram-node data"
+            initial={reduced ? { opacity: 1 } : { x: 241, y: -112, scale: 0.2, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, scale: 1, opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring", stiffness: 70, damping: 14, mass: 0.9, delay: 0.55 }}
+          >
+            <motion.div animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 1.8 }}>
+              <DiagramBox icon={Database} title="DATA" items={["Databases", "Warehouse", "Integration"]} />
+            </motion.div>
+          </motion.div>
+
+          {/* Top-Right: Intelligence - emerges diagonally up-right from behind center cloud */}
+          <motion.div
+            className="diagram-node intelligence"
+            initial={reduced ? { opacity: 1 } : { x: -241, y: 112, scale: 0.2, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, scale: 1, opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring", stiffness: 70, damping: 14, mass: 0.9, delay: 0.4 }}
+          >
+            <motion.div animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 1.6 }}>
+              <DiagramBox icon={BrainCircuit} title="INTELLIGENCE" items={["AI", "Analytics", "Automation"]} />
+            </motion.div>
+          </motion.div>
+
+          {/* Bottom-Right: Automation - emerges diagonally down-right from behind center cloud */}
+          <motion.div
+            className="diagram-node automation"
+            initial={reduced ? { opacity: 1 } : { x: -241, y: -112, scale: 0.2, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, scale: 1, opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring", stiffness: 70, damping: 14, mass: 0.9, delay: 0.55 }}
+          >
+            <motion.div animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 1.8 }}>
+              <DiagramBox icon={Zap} title="AUTOMATION" items={["Workflows", "Approvals", "AI Agents"]} />
+            </motion.div>
+          </motion.div>
+          
+          {/* Bottom: Cloud & Infrastructure - emerges downward from behind center cloud */}
+          <motion.div
+            className="diagram-node cloud-infra-node"
+            initial={reduced ? { opacity: 1 } : { x: 0, y: -200, scale: 0.2, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, scale: 1, opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring", stiffness: 70, damping: 14, mass: 0.9, delay: 0.35 }}
+          >
+            <motion.div animate={reduced ? {} : { y: [-2, 2] }} transition={{ ...floatTransition, delay: 1.5 }}>
+              <DiagramBox icon={Cloud} title="CLOUD & INFRASTRUCTURE" items={["Cloud", "Security", "Scalability", "Backup"]} />
+            </motion.div>
+          </motion.div>
+
+          {/* Centralized Cloud Core: stays in front with z-index 10 as nodes emerge from behind */}
+          <motion.div
+            className="core-cloud"
+            data-gsap-pulse
+            initial={reduced ? { opacity: 1 } : { scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
             <img src="/LOGO.png" alt="Tekkzy Logo" style={{ width: '60px', height: 'auto', marginBottom: '8px', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }} />
             <span>TEKKZY<br/>INTELLIGENT CLOUD</span>
-          </div>
+          </motion.div>
         </div>
       </section>
 

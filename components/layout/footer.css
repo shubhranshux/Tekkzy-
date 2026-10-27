@@ -1,0 +1,282 @@
+/* ═════════════════════════════════════════════════════════════════════════
+   SARVAM-STYLE ARCHITECTURAL FOOTER WITH GIANT ARTWORK WORDMARK (TEKKZY)
+   Clean, Crisp Off-White/White Multi-Column Layout + Heritage Artwork Fill
+   ═════════════════════════════════════════════════════════════════════════ */
+
+.site-footer-sarvam {
+  position: relative;
+  background: #ffffff !important;
+  color: #334155 !important;
+  border-top: 1px solid #edf2f7;
+  padding: 72px 0 0 0 !important;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-sarvam-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4.5vw, 56px);
+  box-sizing: border-box;
+}
+
+/* ── Top Layout Grid (Left Info + Right Multi-Columns) ── */
+.footer-sarvam-top-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+
+/* ── Left Info Column ── */
+.footer-sarvam-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Security Compliance Badges */
+.footer-sarvam-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-compliance-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  min-width: 80px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.footer-compliance-badge:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.footer-badge-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #125af5;
+  margin-bottom: 4px;
+}
+
+.footer-compliance-badge strong {
+  font-family: var(--font-space-grotesk), monospace, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.footer-compliance-badge span {
+  font-size: 8px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+/* "Find us at" & Socials */
+.footer-sarvam-socials-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-sarvam-socials-label {
+  font-size: 12.5px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.footer-sarvam-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-sarvam-social-btn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-sarvam-social-btn:hover {
+  color: #125af5;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+}
+
+/* Company Copyright & Registered Office Card */
+.footer-sarvam-corp-card {
+  padding: 16px 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #64748b;
+}
+
+.footer-sarvam-corp-card p {
+  margin: 0 0 10px;
+  font-size: 12px;
+}
+
+.footer-sarvam-corp-card p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-sarvam-corp-card strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* ── Right Navigation Columns Grid ── */
+.footer-sarvam-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 36px);
+  align-items: start;
+}
+
+.footer-sarvam-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-sarvam-col-title {
+  font-family: 'Bricolage Grotesque', 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a !important;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.footer-sarvam-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-sarvam-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569 !important;
+  text-decoration: none;
+  transition: color 0.18s ease, transform 0.18s ease;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.footer-sarvam-link:hover {
+  color: #125af5 !important;
+  transform: translateX(2px);
+}
+
+/* ── GIGANTIC SARVAM-STYLE WORDMARK AT BOTTOM (JET BLACK BACKGROUND) ── */
+.footer-sarvam-wordmark-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: clamp(48px, 6vw, 84px);
+  padding-top: clamp(28px, 3.6vw, 56px);
+  padding-bottom: 0;
+  line-height: 0.74;
+  background: #000000 !important;
+  border-top: 1px solid #0f172a;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.footer-sarvam-wordmark-text {
+  font-family: var(--font-space-grotesk), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(100px, 18.2vw, 290px);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: -0.04em;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f1f5f9 15%,
+    #cbd5e1 32%,
+    #94a3b8 48%,
+    #e2e8f0 65%,
+    #64748b 82%,
+    #334155 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  filter: drop-shadow(0 4px 28px rgba(255, 255, 255, 0.16));
+}
+
+.footer-sarvam-wordmark-container:hover .footer-sarvam-wordmark-text {
+  transform: scale(1.015);
+  filter: drop-shadow(0 6px 40px rgba(255, 255, 255, 0.28)) brightness(1.08);
+}
+
+/* ── Responsive Mobile Behavior ── */
+@media (max-width: 1100px) {
+  .footer-sarvam-top-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-sarvam-nav-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-footer-sarvam {
+    padding-top: 48px !important;
+  }
+  .footer-sarvam-nav-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .footer-sarvam-wordmark-container {
+    padding-top: 20px !important;
+    margin-top: 36px !important;
+  }
+  .footer-sarvam-wordmark-text {
+    font-size: clamp(96px, 25vw, 160px);
+    margin-bottom: -0.03em;
+  }
+}
