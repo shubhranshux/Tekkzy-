@@ -45,17 +45,17 @@ const channels = [
 ];
 
 const services = [
-  { icon: Search, title: "Search Engine Optimization", desc: "Technical audits, keyword strategy, content optimization, link building, and local SEO. We drive qualified organic traffic that converts.", color: "#f59e0b", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" },
-  { icon: Globe2, title: "Google Business Profile", desc: "Local listing optimization, review strategy, map visibility, location pages, and monthly insights to turn nearby searches into enquiries.", color: "#2f8aef", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&q=80" },
-  { icon: Target, title: "Paid Advertising (PPC)", desc: "Google Ads, Meta Ads, LinkedIn Ads — expertly managed campaigns with A/B testing, audience targeting, and conversion tracking for maximum ROAS.", color: "#1760ed", image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&q=80" },
-  { icon: Share2, title: "Social Media Marketing", desc: "Strategy, content creation, community management, and paid social campaigns across Instagram, LinkedIn, Twitter, and emerging platforms.", color: "#e54d75", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&q=80" },
-  { icon: PenTool, title: "Content Marketing", desc: "Blog strategy, long-form content, whitepapers, case studies, infographics, and video scripts — built around your target keywords and buyer journey.", color: "#896dff", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80" },
-  { icon: Mail, title: "Email & Marketing Automation", desc: "Drip campaigns, newsletter design, segmentation, personalization, A/B testing, and automated workflows that nurture leads through your funnel.", color: "#1ba77e", image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=500&q=80" },
-  { icon: PlaySquare, title: "Cinematic Video Marketing", desc: "Brand films, product videos, social reels, YouTube strategy, motion graphics, and high-retention edits built to earn attention.", color: "#d75062", image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=500&q=80" },
-  { icon: Globe2, title: "Conversion Rate Optimization", desc: "Landing page optimization, A/B testing, heat map analysis, user journey mapping, and data-driven UX improvements that turn visitors into customers.", color: "#e95812", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" },
-  { icon: Users, title: "Influencer & Creator Marketing", desc: "Creator discovery, outreach, campaign management, content approvals, and performance reporting that keeps your brand authentic.", color: "#7157ee", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&q=80" },
-  { icon: Star, title: "Reputation & PR Marketing", desc: "Review generation, reputation monitoring, thought leadership, digital PR, and credibility-building campaigns for brands that lead.", color: "#d99c0b", image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&q=80" },
-  { icon: TrendingUp, title: "Affiliate & Performance Marketing", desc: "Partner programs, attribution, commission strategy, conversion tracking, and scalable acquisition built around profitable growth.", color: "#2ba88e", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=80" },
+  { slug: "seo", icon: Search, title: "Search Engine Optimization", desc: "Technical audits, keyword strategy, content optimization, link building, and local SEO. We drive qualified organic traffic that converts.", color: "#f59e0b", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" },
+  { slug: "google-business-profile", icon: Globe2, title: "Google Business Profile", desc: "Local listing optimization, review strategy, map visibility, location pages, and monthly insights to turn nearby searches into enquiries.", color: "#2f8aef", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&q=80" },
+  { slug: "paid-advertising", icon: Target, title: "Paid Advertising (PPC)", desc: "Google Ads, Meta Ads, LinkedIn Ads — expertly managed campaigns with A/B testing, audience targeting, and conversion tracking for maximum ROAS.", color: "#1760ed", image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=500&q=80" },
+  { slug: "social-media-marketing", icon: Share2, title: "Social Media Marketing", desc: "Strategy, content creation, community management, and paid social campaigns across Instagram, LinkedIn, Twitter, and emerging platforms.", color: "#e54d75", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&q=80" },
+  { slug: "content-marketing", icon: PenTool, title: "Content Marketing", desc: "Blog strategy, long-form content, whitepapers, case studies, infographics, and video scripts — built around your target keywords and buyer journey.", color: "#896dff", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80" },
+  { slug: "email-marketing", icon: Mail, title: "Email & Marketing Automation", desc: "Drip campaigns, newsletter design, segmentation, personalization, A/B testing, and automated workflows that nurture leads through your funnel.", color: "#1ba77e", image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=500&q=80" },
+  { slug: "cinematic-video-marketing", icon: PlaySquare, title: "Cinematic Video Marketing", desc: "Brand films, product videos, social reels, YouTube strategy, motion graphics, and high-retention edits built to earn attention.", color: "#d75062", image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=500&q=80" },
+  { slug: "conversion-rate-optimization", icon: Globe2, title: "Conversion Rate Optimization", desc: "Landing page optimization, A/B testing, heat map analysis, user journey mapping, and data-driven UX improvements that turn visitors into customers.", color: "#e95812", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" },
+  { slug: "influencer-marketing", icon: Users, title: "Influencer & Creator Marketing", desc: "Creator discovery, outreach, campaign management, content approvals, and performance reporting that keeps your brand authentic.", color: "#7157ee", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&q=80" },
+  { slug: "reputation-management", icon: Star, title: "Reputation & PR Marketing", desc: "Review generation, reputation monitoring, thought leadership, digital PR, and credibility-building campaigns for brands that lead.", color: "#d99c0b", image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&q=80" },
+  { slug: "affiliate-marketing", icon: TrendingUp, title: "Affiliate & Performance Marketing", desc: "Partner programs, attribution, commission strategy, conversion tracking, and scalable acquisition built around profitable growth.", color: "#2ba88e", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=80" },
 ];
 
 const stats = [
@@ -270,18 +270,22 @@ export default function DigitalMarketingPage() {
             <div className="dm-services-grid-full" data-horizontal-track>
           {services.map((s, i) => (
             <motion.div key={s.title} className="dm-service-card-full product-card" {...fade(i * 0.06)}>
-              <div className="dm-service-img">
+              <Link href={`/product/digital-marketing/${s.slug}`} className="dm-service-img" style={{ display: "block" }}>
                 <Image src={s.image} alt={s.title} fill sizes="(max-width: 768px) 100vw, 400px" style={{ objectFit: "cover" }} />
                 <div className="dm-service-img-overlay" />
                 <div className="dm-service-icon-badge" style={{ background: s.color }}>
                   <s.icon size={20} color="#fff" />
                 </div>
-              </div>
+              </Link>
               <div className="dm-service-body">
-                <h3>{s.title}</h3>
+                <h3>
+                  <Link href={`/product/digital-marketing/${s.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
+                    {s.title}
+                  </Link>
+                </h3>
                 <p>{s.desc}</p>
-                <Link href="/contact" className="dm-service-link">
-                  Get Started <ArrowRight size={13} />
+                <Link href={`/product/digital-marketing/${s.slug}`} className="dm-service-link">
+                  Explore Service <ArrowRight size={13} />
                 </Link>
               </div>
             </motion.div>

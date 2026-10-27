@@ -1,0 +1,594 @@
+/* ═════════════════════════════════════════════════════════════════════════
+   DIGITAL MARKETING SERVICE DETAIL — BALANCED FULL-WIDTH WHITE UI
+   Matches Tekkzy Product Page Standards: Zero Lopsided Blank Space,
+   Balanced Centered Grids, Pure White & Slate-50 Accents, Zero CTA Buttons
+   ═════════════════════════════════════════════════════════════════════════ */
+
+.service-detail-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff !important;
+  color: #0b152a !important;
+  font-family: var(--font-inter-tight), "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Global Shell Container ── */
+.sd-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Section Header (Centered Standard) ── */
+.sd-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 52px;
+}
+
+.sd-section-header .eyebrow {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #125af5;
+  margin-bottom: 10px;
+}
+
+.sd-section-header h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+  color: #0b152a;
+  margin: 0 0 14px;
+}
+
+.sd-section-header p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5d7a;
+  margin: 0;
+}
+
+/* ── Top Back Button ── */
+.sd-top-nav {
+  margin-bottom: 28px;
+}
+
+.sd-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #4a5d7a;
+  text-decoration: none;
+  padding: 8px 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 99px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+}
+
+.sd-back-link:hover {
+  color: #125af5;
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateX(-3px);
+}
+
+/* ── 1. Split Hero Section ── */
+.sd-hero-section {
+  position: relative;
+  width: 100%;
+  padding: 130px 0 72px;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sd-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.sd-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sd-hero-title {
+  font-size: clamp(2.6rem, 4.8vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  margin: 0 0 16px;
+  color: #0b152a;
+}
+
+.sd-hero-subtitle {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 20px;
+}
+
+.sd-hero-overview {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #4a5d7a;
+  margin: 0 0 28px;
+  max-width: 620px;
+}
+
+/* Spec Badges Row */
+.sd-hero-specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sd-hero-spec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 6px 14px;
+  border-radius: 99px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+.sd-hero-spec-pill strong {
+  color: #0b152a;
+}
+
+/* Hero Image Card */
+.sd-hero-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  background: #f1f5f9;
+}
+
+.sd-hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(11, 21, 42, 0.45) 100%);
+  pointer-events: none;
+}
+
+/* ── 2. Full-Width Metrics Band ── */
+.sd-metrics-section {
+  padding: 52px 0;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.sd-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sd-metric-card {
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sd-metric-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.sd-metric-value {
+  font-size: clamp(2.2rem, 3.4vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+
+.sd-metric-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0b152a;
+  margin-bottom: 4px;
+}
+
+.sd-metric-desc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+/* ── 3. Strategic Pillars (Full-Width 2x2 Grid) ── */
+.sd-pillars-section {
+  padding: 88px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sd-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.sd-pillar-card {
+  padding: 34px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sd-pillar-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.sd-pillar-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0b152a;
+  margin: 0 0 12px;
+  letter-spacing: -0.015em;
+}
+
+.sd-pillar-desc {
+  font-size: 14.5px;
+  color: #4a5d7a;
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+
+.sd-pillar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sd-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.sd-pillar-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── 4. 5-Phase Systematic Framework (Full-Width Process Cards) ── */
+.sd-process-section {
+  padding: 88px 0;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sd-process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sd-process-card {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 28px;
+  padding: 26px 32px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+  align-items: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sd-process-card:hover {
+  transform: translateX(6px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.sd-process-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.sd-process-num {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sd-process-phase {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.sd-process-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b152a;
+  margin: 0 0 6px;
+}
+
+.sd-process-info p {
+  font-size: 14.5px;
+  color: #4a5d7a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── 5. Balanced Deliverables & Technology Stack (2 Equal Columns) ── */
+.sd-deliverables-section {
+  padding: 88px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sd-deliverables-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.sd-deliverables-card {
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.sd-deliverables-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0b152a;
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sd-deliverables-items-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: auto;
+}
+
+.sd-deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.5;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.sd-deliverable-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #10b981;
+}
+
+/* Tool Badges */
+.sd-tool-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.sd-tool-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.sd-tool-badge:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.sd-commitments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sd-commitment-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.sd-commitment-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #10b981;
+}
+
+/* ── 6. Full-Width Balanced FAQ Grid ── */
+.sd-faq-section {
+  padding: 88px 0;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.sd-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sd-faq-card {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.sd-faq-question {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0b152a;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.sd-faq-answer {
+  font-size: 14px;
+  color: #4a5d7a;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── 7. Cross-Navigation to All Other Services ── */
+.sd-other-section {
+  padding: 88px 0 96px;
+  background: #ffffff;
+}
+
+.sd-other-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.sd-other-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #0b152a;
+  font-size: 14.5px;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s ease;
+}
+
+.sd-other-card:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
+  box-shadow: 0 8px 20px rgba(18, 90, 245, 0.08);
+  color: #125af5;
+}
+
+.sd-other-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Responsive Breakpoints ── */
+@media (max-width: 1024px) {
+  .sd-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .sd-hero-image-wrap {
+    height: 320px;
+  }
+  .sd-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sd-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .sd-deliverables-split-grid {
+    grid-template-columns: 1fr;
+  }
+  .sd-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .sd-hero-section {
+    padding-top: 100px;
+  }
+  .sd-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .sd-process-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .sd-process-badge {
+    flex-direction: row;
+    gap: 8px;
+    width: fit-content;
+  }
+  .sd-other-grid {
+    grid-template-columns: 1fr;
+  }
+}

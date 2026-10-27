@@ -215,7 +215,7 @@
   background: #000000 !important;
   border-top: 1px solid #0f172a;
   user-select: none;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .footer-sarvam-wordmark-text {
@@ -242,13 +242,8 @@
   background-clip: text;
   color: transparent !important;
   -webkit-text-fill-color: transparent !important;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
   filter: drop-shadow(0 4px 28px rgba(255, 255, 255, 0.16));
-}
-
-.footer-sarvam-wordmark-container:hover .footer-sarvam-wordmark-text {
-  transform: scale(1.015);
-  filter: drop-shadow(0 6px 40px rgba(255, 255, 255, 0.28)) brightness(1.08);
+  pointer-events: none;
 }
 
 /* ── Responsive Mobile Behavior ── */

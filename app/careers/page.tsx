@@ -46,14 +46,18 @@ const disciplines = [
 ];
 
 const jobs = [
-  { title: "Frontend Developer", meta: "Engineering · Full-time", tone: "blue" },
-  { title: "Software Development Intern", meta: "Engineering · Internship", tone: "violet" },
-  { title: "UI/UX Design Intern", meta: "Design · Internship", tone: "pink" },
-  { title: "Data Analyst", meta: "Data & AI · Full-time", tone: "green" },
+  { title: "Sales & Business Development Intern", meta: "Sales & Growth · Internship", tone: "emerald" },
   { title: "Digital Marketing Intern", meta: "Digital & Marketing · Internship", tone: "orange" },
-  { title: "SEO Specialist", meta: "Digital & Marketing · Full-time", tone: "yellow" },
-  { title: "Content Marketing Associate", meta: "Digital & Marketing · Full-time", tone: "coral" },
-  { title: "Social Media Intern", meta: "Digital & Marketing · Internship", tone: "teal" },
+  { title: "B2B Tech Sales Associate", meta: "Sales · Full-time", tone: "blue" },
+  { title: "Performance Marketing Intern", meta: "Digital & Marketing · Internship", tone: "violet" },
+  { title: "Software Development Intern", meta: "Engineering · Internship", tone: "teal" },
+  { title: "UI/UX Design Intern", meta: "Design · Internship", tone: "pink" },
+  { title: "SEO & Growth Specialist", meta: "Digital Marketing · Full-time", tone: "yellow" },
+  { title: "Content Marketing Associate", meta: "Digital Marketing · Full-time", tone: "coral" },
+  { title: "Data Analyst", meta: "Data & AI · Full-time", tone: "green" },
+  { title: "Frontend Developer", meta: "Engineering · Full-time", tone: "blue" },
+  { title: "Full Stack Engineer", meta: "Engineering · Full-time", tone: "violet" },
+  { title: "Graphic & Visual Design Intern", meta: "Design · Internship", tone: "teal" },
 ];
 
 const internJourney = [
@@ -110,9 +114,18 @@ export default function CareersPage() {
 
       <section className="growth-section careers-shell"><div><Label>Your growth has a path</Label><h2>Keep learning.<br /><em>Keep moving.</em></h2><p>There isn&apos;t one definition of career growth. At Tekkzy, growth can mean deeper expertise, greater responsibility, team leadership, or a new direction. We keep the conversation open and help you choose the next challenge that fits.</p><div className="growth-steps">{["Learn", "Explore", "Build", "Contribute", "Lead", "Create impact"].map((step, index) => <div key={step}><span>{String(index + 1).padStart(2, "0")}</span><b>{step}</b></div>)}</div></div><div className="growth-panel"><div className="growth-panel-top"><Label>Learning & development</Label><h3>Keep learning. Keep moving.</h3><p>Technology changes quickly. Your learning shouldn&apos;t stop.</p></div><div className="learning-grid"><span><Code2 size={16} />Technical learning</span><span><Database size={16} />Project learning</span><span><Users size={16} />Mentorship</span><span><HeartHandshake size={16} />Feedback</span><span><Sparkles size={16} />Knowledge sharing</span><span><Zap size={16} />Continuous growth</span></div></div></section>
 
-      <section className="project-banner careers-shell"><div className="project-banner-image"><Image src="/careers/mentor-interns.png" alt="A mentor helping interns learn together" fill sizes="40vw" style={{ objectFit: "cover", objectPosition: "50% 45%" }} /></div><div><Label>Our internship domains</Label><h2>Learn on projects<br /><em>that matter.</em></h2><p>Contribute to real products, real clients, and real impact from day one. Ask questions, try ideas, and leave every week with a new piece of your craft.</p><ArrowButton>Explore internships</ArrowButton></div></section>
+      <section className="project-banner careers-shell">
+        <div className="project-banner-image">
+          <Image src="/careers/mentor-interns.png" alt="A mentor helping interns learn together" fill sizes="40vw" style={{ objectFit: "cover", objectPosition: "50% 45%" }} />
+        </div>
+        <div>
+          <Label>Our internship domains</Label>
+          <h2>Learn on projects<br /><em>that matter.</em></h2>
+          <p>Contribute to real products, real clients, and real impact from day one. Ask questions, try ideas, and leave every week with a new piece of your craft.</p>
+        </div>
+      </section>
 
-      <section className="jobs-section careers-shell" id="open-positions"><div className="section-heading section-heading-row"><div><Label>Open positions</Label><h2>Find your next<br /><em>opportunity.</em></h2><p className="jobs-heading-copy">Explore roles where your skills, curiosity, and ideas can make a meaningful difference.</p></div><div className="job-filters" aria-label="Filter open positions"><span className="job-filter-heading">Filter by role</span><button className="active">All</button><button>Internships</button><button>Full-time</button><button>Design</button><button>Development</button></div></div><div className="jobs-grid">{jobs.map((job) => <article className={`job-card job-${job.tone}`} key={job.title}><div className="job-card-icon"><Search size={17} /></div><h3>{job.title}</h3><p>{job.meta}</p><Link href="/contact" className="job-link">View position <ArrowRight size={14} /></Link></article>)}</div><div className="talent-banner"><div><Label>Don&apos;t see your role?</Label><h3>Let&apos;s still talk.</h3><p>Great people don&apos;t always arrive when a role is posted. Share your profile and we&apos;ll keep you in mind.</p></div><Link href="/contact" className="careers-button">Join our talent network <ArrowRight size={15} /></Link></div></section>
+      <section className="jobs-section careers-shell" id="open-positions"><div className="section-heading section-heading-row"><div><Label>Open positions</Label><h2>Find your next<br /><em>opportunity.</em></h2><p className="jobs-heading-copy">Explore roles where your skills, curiosity, and ideas can make a meaningful difference.</p></div><div className="job-filters" aria-label="Filter open positions"><span className="job-filter-heading">Filter by role</span><button className="active">All</button><button>Sales</button><button>Digital Marketing</button><button>Internships</button><button>Full-time</button><button>Design</button><button>Development</button></div></div><div className="jobs-grid">{jobs.map((job) => <article className={`job-card job-${job.tone}`} key={job.title}><div className="job-card-icon"><Search size={17} /></div><h3>{job.title}</h3><p>{job.meta}</p><Link href="/contact" className="job-link">View position <ArrowRight size={14} /></Link></article>)}</div><div className="talent-banner"><div><Label>Don&apos;t see your role?</Label><h3>Let&apos;s still talk.</h3><p>Great people don&apos;t always arrive when a role is posted. Share your profile and we&apos;ll keep you in mind.</p></div><Link href="/contact" className="careers-button">Join our talent network <ArrowRight size={15} /></Link></div></section>
 
       <section className="faq-section careers-shell"><div><Label>Frequently asked questions</Label><h2>Everything you need<br /><em>to know.</em></h2><p>Still curious? Reach out and we&apos;ll be happy to help.</p></div><div className="faq-list">{["Who can apply for internships?", "Do internships involve real projects?", "Can freshers apply for full-time positions?", "Can I apply if there isn't a suitable opening?", "What skills do I need?", "Can an internship lead to a full-time opportunity?"].map((question) => <details key={question}><summary>{question}<ChevronDown size={16} /></summary><p>Yes. We look for curious, thoughtful people who want to learn and contribute. The right attitude matters as much as experience.</p></details>)}</div></section>
 
